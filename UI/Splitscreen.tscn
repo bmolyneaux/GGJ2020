@@ -1,13 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Level/Level.tscn" type="PackedScene" id=1]
-[ext_resource path="res://UI/Splitscreen.gd" type="Script" id=2]
 [ext_resource path="res://UI/CameraPivot.gd" type="Script" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -36,7 +34,7 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="CameraPivot" type="Spatial" parent="GridContainer/ViewportContainer/Viewport"]
-transform = Transform( 1, 0, 0, 0, 0.465151, 0.885231, 0, -0.885231, 0.465151, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0 )
 script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer/Viewport/CameraPivot"]
@@ -62,8 +60,9 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="CameraPivot" type="Spatial" parent="GridContainer/ViewportContainer2/Viewport"]
-transform = Transform( 1, 0, 0, 0, 0.465151, 0.885231, 0, -0.885231, 0.465151, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0 )
 script = ExtResource( 3 )
+index = 1
 
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer2/Viewport/CameraPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )
@@ -86,8 +85,9 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="CameraPivot" type="Spatial" parent="GridContainer/ViewportContainer3/Viewport"]
-transform = Transform( 1, 0, 0, 0, 0.465151, 0.885231, 0, -0.885231, 0.465151, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0 )
 script = ExtResource( 3 )
+index = 2
 
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer3/Viewport/CameraPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )
@@ -111,8 +111,9 @@ handle_input_locally = false
 render_target_update_mode = 3
 
 [node name="CameraPivot" type="Spatial" parent="GridContainer/ViewportContainer4/Viewport"]
-transform = Transform( 1, 0, 0, 0, 0.465151, 0.885231, 0, -0.885231, 0.465151, 0, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0 )
 script = ExtResource( 3 )
+index = 3
 
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer4/Viewport/CameraPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )

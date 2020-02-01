@@ -1,6 +1,7 @@
 extends KinematicBody
 class_name Repairer
 
+export(int) var index := 0
 export var acceleration := 10
 export var max_speed := 200
 var speed := Vector2(0, 0)
@@ -8,6 +9,9 @@ var input : Vector2
 var numCollected := 0
 var caught_cooldown := 0.0
 const caught_cooldown_length := 3.0
+
+func _ready():
+	add_to_group("player")
 
 func _physics_process(delta):
 	var desired_speed = input * max_speed

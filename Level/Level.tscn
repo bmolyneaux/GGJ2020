@@ -41,6 +41,27 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.232886, 0.1, -0.229604 )
 [node name="PlayerController" type="Node" parent="Repairer"]
 script = ExtResource( 2 )
 
+[node name="Repairer2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.232886, 0.1, 2.08188 )
+index = 1
+
+[node name="PlayerController" type="Node" parent="Repairer2"]
+script = ExtResource( 2 )
+
+[node name="Repairer3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.571, 0.1, -0.229604 )
+index = 2
+
+[node name="PlayerController" type="Node" parent="Repairer3"]
+script = ExtResource( 2 )
+
+[node name="Repairer4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.11278, 0.1, -0.229604 )
+index = 3
+
+[node name="PlayerController" type="Node" parent="Repairer4"]
+script = ExtResource( 2 )
+
 [node name="CameraOrigin" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.535208, 0.84472, 0, -0.84472, 0.535208, 0, 0, 0 )
 
