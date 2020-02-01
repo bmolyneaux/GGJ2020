@@ -28,6 +28,8 @@ func _physics_process(delta):
 			continue
 		collectable.collect()
 		numCollected += 1
+		
+	$KittyCat.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
 
 func _process(delta):
 	if caught_cooldown > 0:
