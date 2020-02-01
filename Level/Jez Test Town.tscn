@@ -21,7 +21,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82203, 0, -2.19619 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99177, 0, 0.413883 )
 
 [node name="Camera" type="Camera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.693553, 0.720406, 0, -0.720406, 0.693553, 0, 7.71513, 6.07694 )
+transform = Transform( 1, 0, 0, 0, 0.856501, 0.516145, 0, -0.516145, 0.856501, 0, 4.03972, 8.00313 )
 
 [node name="Repairer" parent="." groups=[
 "Player",
@@ -29,7 +29,7 @@ transform = Transform( 1, 0, 0, 0, 0.693553, 0.720406, 0, -0.720406, 0.693553, 0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98274, 0, 3.11699 )
 
 [node name="Catcher" parent="." instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.285278, 0, 2.4495 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13724, 0, 2.65013 )
 
 [node name="Node" type="Node" parent="Catcher"]
 script = ExtResource( 4 )

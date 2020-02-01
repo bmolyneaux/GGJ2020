@@ -15,5 +15,14 @@ func _physics_process(delta):
 		
 	move_and_slide(movement, Vector3(0, 1, 0))
 
+	var bodies = $Area.get_overlapping_bodies()
+	for body in bodies:
+		# Check for catching the skating kiddos
+		if not body.is_in_group("Player"):
+			return
+		var repairer := body as Repairer
+		if repairer.can_be_caught():
+			repairer.get_caught()
+
 func set_input(value : Vector2):
 	input = value

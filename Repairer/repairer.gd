@@ -6,6 +6,8 @@ export var max_speed := 200
 var speed := Vector2(0, 0)
 var input : Vector2
 var numCollected := 0
+var caught_cooldown := 0.0
+const caught_cooldown_length := 3.0
 
 func _physics_process(delta):
 	var desired_speed = input * max_speed
@@ -27,6 +29,17 @@ func _physics_process(delta):
 		collectable.collect()
 		numCollected += 1
 
+func _process(delta):
+	if caught_cooldown > 0:
+		caught_cooldown -= delta
+		if caught_cooldown < 0:
+			caught_cooldown = 0
+	
+	if caught_cooldown > 0:
+		scale.y = 1.3
+	else:
+		scale.y = 1
+
 func set_input(value : Vector2):
 	input = value
 
@@ -41,3 +54,9 @@ func repair():
 		if not repairable.is_in_group("Repairable"):
 			continue
 		repairable.repair()
+
+func can_be_caught():
+	return caught_cooldown <= 0
+
+func get_caught():
+	caught_cooldown = caught_cooldown_length
