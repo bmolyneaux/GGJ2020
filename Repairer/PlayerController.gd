@@ -14,4 +14,4 @@ func _physics_process(delta):
 
 	input = input.clamped(1)
 
-	(get_parent() as Repairer).set_input(input)
+	get_parent().set_input(input)
