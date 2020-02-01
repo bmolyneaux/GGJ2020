@@ -8,7 +8,15 @@
 [node name="Spatial" type="Spatial"]
 
 [node name="Repairable" parent="." instance=ExtResource( 1 )]
-repaired = true
+
+[node name="Repairable2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51652, 0, -4.06838 )
+
+[node name="Repairable3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82203, 0, -2.19619 )
+
+[node name="Repairable4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99177, 0, 0.413883 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.693553, 0.720406, 0, -0.720406, 0.693553, 0, 7.71513, 6.07694 )

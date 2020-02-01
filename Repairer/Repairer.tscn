@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Repairer/repairer.gd" type="Script" id=1]
 
@@ -8,6 +8,10 @@
 
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.435294, 0.301961, 0.188235, 1 )
+
+[sub_resource type="CylinderShape" id=4]
+radius = 0.836404
+height = 0.922658
 
 [node name="Repairer" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -20,3 +24,9 @@ shape = SubResource( 1 )
 transform = Transform( 0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0.3, 0 )
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 4 )

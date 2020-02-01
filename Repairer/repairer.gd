@@ -17,3 +17,16 @@ func _physics_process(delta):
 
 func set_input(value : Vector2):
 	input = value
+
+func _unhandled_key_input(event):
+	if event.pressed and event.scancode == KEY_SPACE:
+		repair()
+	
+
+func repair():
+	var bodies = $Area.get_overlapping_bodies()
+	for body in bodies:
+		var repairable = body.get_parent()
+		if not repairable.is_in_group("Repairable"):
+			continue
+		repairable.repair()
