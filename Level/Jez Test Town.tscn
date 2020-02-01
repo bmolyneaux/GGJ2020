@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Repairable/Repairable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Repairer/Repairer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/GameManager.gd" type="Script" id=3]
 [ext_resource path="res://Repairer/PlayerController.gd" type="Script" id=4]
+[ext_resource path="res://Collectables/Collectable.tscn" type="PackedScene" id=5]
 
 [node name="Spatial" type="Spatial"]
 
@@ -26,6 +27,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98274, 0, 3.11699 )
 
 [node name="Node" type="Node" parent="Repairer"]
 script = ExtResource( 4 )
+
+[node name="CD" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94015, 0, 1.84721 )
 
 [node name="Game Manager" type="Node" parent="."]
 script = ExtResource( 3 )
