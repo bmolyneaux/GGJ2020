@@ -1,10 +1,10 @@
 extends Node
 
-export(int) var up: int
-export(int) var down: int
-export(int) var left: int
-export(int) var right: int
-export(int) var catch_or_repair: int
+export(int) var up: int = KEY_W
+export(int) var down: int = KEY_S
+export(int) var left: int = KEY_A
+export(int) var right: int = KEY_D
+export(int) var catch_or_repair: int = KEY_SPACE
 
 func _physics_process(delta):
 	var input = Vector2(0, 0)
