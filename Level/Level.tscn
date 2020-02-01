@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Repairer/Repairer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Repairer/PlayerController.gd" type="Script" id=2]
@@ -13,9 +13,13 @@ albedo_color = Color( 0.254902, 0.521569, 0.188235, 1 )
 albedo_texture = ExtResource( 3 )
 uv1_scale = Vector3( 50, 50, 50 )
 
+[sub_resource type="ProceduralSky" id=5]
+
 [sub_resource type="Environment" id=4]
-background_mode = 2
+background_mode = 3
+background_sky = SubResource( 5 )
 tonemap_mode = 2
+ssao_enabled = true
 
 [node name="Spatial" type="Spatial"]
 
