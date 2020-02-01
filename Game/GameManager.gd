@@ -11,3 +11,5 @@ func _process(delta):
 	for repairable in repairables:
 		if repairable.repaired:
 			numRepaired += 1
+	
+	$DebugLabel.text = "Repaired: %s / %s" % [numRepaired, repairables.size()]

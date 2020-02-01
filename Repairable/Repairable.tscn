@@ -6,7 +6,9 @@
 
 [sub_resource type="CylinderShape" id=2]
 
-[node name="Repairable" type="Spatial"]
+[node name="Repairable" type="Spatial" groups=[
+"Repairable",
+]]
 script = ExtResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
