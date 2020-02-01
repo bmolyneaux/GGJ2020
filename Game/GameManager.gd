@@ -12,4 +12,9 @@ func _process(delta):
 		if repairable.repaired:
 			numRepaired += 1
 	
-	$DebugLabel.text = "Repaired: %s / %s" % [numRepaired, repairables.size()]
+	var player = get_tree().get_nodes_in_group("Player")[0]
+
+	$DebugLabel.text = (
+		("Repaired: %s / %s\n" % [numRepaired, repairables.size()]) +
+		("Player CDs: %s\n" % player.numCollected)
+	)

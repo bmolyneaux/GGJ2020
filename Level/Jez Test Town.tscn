@@ -22,7 +22,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.99177, 0, 0.413883 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.693553, 0.720406, 0, -0.720406, 0.693553, 0, 7.71513, 6.07694 )
 
-[node name="Repairer" parent="." instance=ExtResource( 2 )]
+[node name="Repairer" parent="." groups=[
+"Player",
+] instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98274, 0, 3.11699 )
 
 [node name="Node" type="Node" parent="Repairer"]
