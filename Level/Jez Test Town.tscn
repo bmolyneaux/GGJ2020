@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Repairable/Repairable.tscn" type="PackedScene" id=1]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Repairable" parent="." instance=ExtResource( 1 )]
+repaired = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.693553, 0.720406, 0, -0.720406, 0.693553, 0, 7.71513, 6.07694 )
