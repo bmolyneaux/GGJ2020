@@ -45,6 +45,9 @@ func _process(delta):
 func set_input(value : Vector2):
 	input = value
 
+func main_action():
+	repair()
+
 func _unhandled_key_input(event):
 	if event.pressed and event.scancode == KEY_SPACE:
 		repair()

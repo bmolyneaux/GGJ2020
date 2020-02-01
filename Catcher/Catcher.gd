@@ -27,3 +27,7 @@ func _physics_process(delta):
 
 func set_input(value : Vector2):
 	input = value
+
+func main_action():
+	# Nothing yet.
+	pass
