@@ -12,4 +12,6 @@ func _physics_process(delta):
 	if Input.is_key_pressed(KEY_D):
 		input.x += 1
 
+	input = input.clamped(1)
+
 	(get_parent() as Repairer).set_input(input)
