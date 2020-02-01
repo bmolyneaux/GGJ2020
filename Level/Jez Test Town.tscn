@@ -29,7 +29,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98274, 0, 3.11699 )
 script = ExtResource( 4 )
 
 [node name="CD" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.94015, 0, 1.84721 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.71771, -0.0174866, -4.30684 )
 
 [node name="Game Manager" type="Node" parent="."]
 script = ExtResource( 3 )
