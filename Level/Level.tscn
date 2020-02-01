@@ -10,11 +10,11 @@
 [sub_resource type="SpatialMaterial" id=3]
 albedo_color = Color( 0.254902, 0.521569, 0.188235, 1 )
 
-[sub_resource type="ProceduralSky" id=5]
+[sub_resource type="ProceduralSky" id=4]
 
-[sub_resource type="Environment" id=6]
+[sub_resource type="Environment" id=5]
 background_mode = 2
-background_sky = SubResource( 5 )
+background_sky = SubResource( 4 )
 tonemap_mode = 2
 
 [node name="Spatial" type="Spatial"]
@@ -52,4 +52,4 @@ shadow_enabled = true
 shadow_bias = 0.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 6 )
+environment = SubResource( 5 )
