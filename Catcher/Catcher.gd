@@ -26,6 +26,10 @@ func _physics_process(delta):
 	$PuppyDog.rotate_x(-0.4)
 	
 	var is_moving = actual_movement.length_squared() > 0.01
+	if is_moving:
+		$PuppyDog.get_node("AnimationPlayer").play("Walk")
+	else:
+		$PuppyDog.get_node("AnimationPlayer").play("Idle")
 	$RunParticles.emitting = is_moving
 
 	var bodies = $Area.get_overlapping_bodies()
