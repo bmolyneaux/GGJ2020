@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Note 3.PNG-debc706b242760e136127d76b1b645b6.s3tc.stex"
-path.etc2="res://.import/Note 3.PNG-debc706b242760e136127d76b1b645b6.etc2.stex"
+path.s3tc="res://.import/t_dirt.png-475cb40cef56e7fa61ad2b88d888d2f3.s3tc.stex"
+path.etc2="res://.import/t_dirt.png-475cb40cef56e7fa61ad2b88d888d2f3.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Note 3.PNG"
-dest_files=[ "res://.import/Note 3.PNG-debc706b242760e136127d76b1b645b6.s3tc.stex", "res://.import/Note 3.PNG-debc706b242760e136127d76b1b645b6.etc2.stex" ]
+source_file="res://Assets/t_dirt.png"
+dest_files=[ "res://.import/t_dirt.png-475cb40cef56e7fa61ad2b88d888d2f3.s3tc.stex", "res://.import/t_dirt.png-475cb40cef56e7fa61ad2b88d888d2f3.etc2.stex" ]
 
 [params]
 
