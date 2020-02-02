@@ -1,28 +1,10 @@
 extends Node
 
-var song = "Song"
+var is_playing_second_song := false
 
-var tracks = [
-	"Drums",
-	"Snare",
-	"Synth"
-]
-
-var tracks_playing := 0
-
-func add_track():
-	if tracks_playing >= len(tracks):
+func next_song():
+	if is_playing_second_song:
 		return
+	is_playing_second_song = true
 	
-	$MixingDeskMusic.fade_in(song, tracks[tracks_playing])
-	tracks_playing += 1
-
-func _ready():
-	$MixingDeskMusic.start_alone(song, tracks[tracks_playing])
-	tracks_playing = 1
-	yield(get_tree().create_timer(2.0), "timeout")
-	add_track()
-	yield(get_tree().create_timer(2.0), "timeout")
-	add_track()
-	yield(get_tree().create_timer(2.0), "timeout")
-	add_track()
+	$MixingDeskMusic.queue_bar_transition("Song2")
