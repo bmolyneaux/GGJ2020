@@ -16,7 +16,8 @@ func repair():
 	if num_times_repaired >= num_repairs_needed:
 		repaired = true
 		repair_time = OS.get_ticks_msec()
-	$AudioStreamPlayer.play()
+		$FixSfx.play()
+	$InsertSfx.play()
 	_updateText()
 
 func _process(delta):
