@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Repairer/Repairer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controllers/KeyboardController.tscn" type="PackedScene" id=2]
@@ -16,6 +16,13 @@
 [ext_resource path="res://Assets/sm_palmBig.fbx" type="PackedScene" id=14]
 [ext_resource path="res://Environment/FenceSpawner.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/beach.png" type="Texture" id=16]
+[ext_resource path="res://addons/mixing-desk/music/song.gd" type="Script" id=17]
+[ext_resource path="res://addons/mixing-desk/music/mixing_desk_music.gd" type="Script" id=18]
+[ext_resource path="res://addons/mixing-desk/music/containers/core_cont.gd" type="Script" id=19]
+[ext_resource path="res://Music/layer1.ogg" type="AudioStream" id=20]
+[ext_resource path="res://Music/layer3.ogg" type="AudioStream" id=21]
+[ext_resource path="res://Music/layer2.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Level/Music.gd" type="Script" id=23]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -120,18 +127,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.64838, 0.1, -6.57013 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.74952, 0.1, -5.76348 )
 index = 1
 
-[node name="KeyboardController" parent="Players/Repairer2" instance=ExtResource( 2 )]
+[node name="GamepadController" parent="Players/Repairer2" instance=ExtResource( 12 )]
 
 [node name="Repairer3" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.80523, 0.1, 8.98917 )
 index = 2
 
-[node name="KeyboardController" parent="Players/Repairer3" instance=ExtResource( 2 )]
+[node name="GamepadController" parent="Players/Repairer3" instance=ExtResource( 12 )]
+player_index = 1
 
 [node name="Catcher" parent="Players" instance=ExtResource( 9 )]
 index = 3
 
-[node name="KeyboardController" parent="Players/Catcher" instance=ExtResource( 2 )]
+[node name="GamepadController" parent="Players/Catcher" instance=ExtResource( 12 )]
+player_index = 2
 
 [node name="Collectables" type="Spatial" parent="."]
 
@@ -297,3 +306,29 @@ transform = Transform( 0.775452, -0.0962369, -0.62403, 0, 0.988316, -0.152417, 0
 use_in_baked_light = true
 mesh = ExtResource( 11 )
 material/0 = null
+
+[node name="Music" type="Node" parent="."]
+script = ExtResource( 23 )
+
+[node name="MixingDeskMusic" type="Node" parent="Music"]
+script = ExtResource( 18 )
+play_mode = 1
+autoplay = NodePath("Song")
+
+[node name="Song" type="Node" parent="Music/MixingDeskMusic"]
+script = ExtResource( 17 )
+tempo = 120
+bars = 2
+beats_in_bar = 4
+
+[node name="CoreContainer" type="Node" parent="Music/MixingDeskMusic/Song"]
+script = ExtResource( 19 )
+
+[node name="Drums" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song/CoreContainer"]
+stream = ExtResource( 20 )
+
+[node name="Snare" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song/CoreContainer"]
+stream = ExtResource( 22 )
+
+[node name="Synth" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song/CoreContainer"]
+stream = ExtResource( 21 )
