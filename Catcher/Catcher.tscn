@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Catcher/Catcher.gd" type="Script" id=1]
-[ext_resource path="res://Repairer/KittyCat.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/PuppyDog.glb" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -35,5 +35,4 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 4 )
 
-[node name="KittyCat" parent="." instance=ExtResource( 2 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+[node name="PuppyDog" parent="." instance=ExtResource( 2 )]

@@ -11,8 +11,8 @@ var num_caught := 0
 
 func _ready():
 	add_to_group("player")
-	$KittyCat.get_node("AnimationPlayer").get_animation("Walk").loop = true
-	$KittyCat.get_node("AnimationPlayer").play("Walk")
+	$PuppyDog.get_node("AnimationPlayer").get_animation("Walk").loop = true
+	$PuppyDog.get_node("AnimationPlayer").play("Walk")
 
 func _physics_process(delta):
 	var desired_speed = input * max_speed
@@ -22,7 +22,7 @@ func _physics_process(delta):
 	var movement = Vector3(speed.x, gravity_speed, speed.y) * delta
 		
 	move_and_slide(movement, Vector3(0, 1, 0))
-	$KittyCat.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
+	$PuppyDog.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
 
 	var bodies = $Area.get_overlapping_bodies()
 	for body in bodies:
