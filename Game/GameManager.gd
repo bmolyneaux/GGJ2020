@@ -17,9 +17,13 @@ func _process(delta):
 		if catcher.num_caught >= 3:
 			game_won = true
 			winner = "Dog"
+			if has_node("WinnerText"):
+				$WinnerText.text = "Dog Wins"
 		if num_repaired >= repairables.size():
 			game_won = true
 			winner = "Cat"
+			if has_node("WinnerText"):
+				$WinnerText.text = "Cats Win"
 	
 	var debugText := ""
 	debugText += "Repaired: %s / %s\n" % [num_repaired, repairables.size()]

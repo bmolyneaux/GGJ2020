@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Level/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/8bitwonderfontdata.tres" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/CameraPivot.gd" type="Script" id=3]
+[ext_resource path="res://Game/GameManager.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+outline_size = 3
+outline_color = Color( 0.0313726, 0.419608, 0.00392157, 1 )
+font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -124,3 +132,23 @@ index = 3
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer4/Viewport/CameraPivot"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
 current = true
+
+[node name="SharedUI" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="WinnerText" type="RichTextLabel" parent="SharedUI"]
+margin_left = 225.715
+margin_top = 253.715
+margin_right = 779.715
+margin_bottom = 359.715
+custom_fonts/normal_font = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DebugLabel" type="RichTextLabel" parent="SharedUI"]
+margin_right = 269.0
+margin_bottom = 91.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
