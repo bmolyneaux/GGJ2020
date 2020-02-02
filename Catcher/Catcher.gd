@@ -1,5 +1,6 @@
 extends KinematicBody
 
+export(int) var index := 0
 export var acceleration := 10
 export var max_speed := 200
 var speed := Vector2(0, 0)
@@ -7,6 +8,7 @@ var input : Vector2
 var num_caught := 0
 
 func _ready():
+	add_to_group("player")
 	$KittyCat.get_node("AnimationPlayer").get_animation("Walk").loop = true
 	$KittyCat.get_node("AnimationPlayer").play("Walk")
 
@@ -23,7 +25,7 @@ func _physics_process(delta):
 	var bodies = $Area.get_overlapping_bodies()
 	for body in bodies:
 		# Check for catching the skating kiddos
-		if not body.is_in_group("Player"):
+		if not body is Repairer:
 			continue
 		var repairer := body as Repairer
 		if repairer.can_be_caught():

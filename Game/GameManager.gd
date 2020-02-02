@@ -7,7 +7,7 @@ func _process(delta):
 		if repairable.repaired:
 			num_repaired += 1
 	
-	var player := get_tree().get_nodes_in_group("Player")[0] as Repairer
+	var player := get_tree().get_nodes_in_group("player")[0] as Repairer
 	var catcher = get_tree().get_nodes_in_group("Catcher")[0]
 
 	$DebugLabel.text = (
