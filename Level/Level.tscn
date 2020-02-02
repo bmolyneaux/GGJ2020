@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Repairer/Repairer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controllers/KeyboardController.tscn" type="PackedScene" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://Collectables/Collectable.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Repairable/Repairable.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Catcher/Catcher.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Game/GameManager.gd" type="Script" id=10]
 [ext_resource path="res://Environment/bush.mesh" type="ArrayMesh" id=11]
 [ext_resource path="res://Controllers/GamepadController.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/sm_palmSmall.fbx" type="PackedScene" id=13]
@@ -200,20 +199,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7584, 0, 10.8497 )
 [node name="Repairable2" parent="Radios" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8319, 0, -2.7046 )
 
-[node name="Node" type="Node" parent="."]
-script = ExtResource( 10 )
-
-[node name="DebugLabel" type="RichTextLabel" parent="Node"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Fences" type="Spatial" parent="."]
 
 [node name="FenceSpawner" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.94402, 0.1, 2.61721 )
+jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -223,6 +213,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333719, 0, -6.18572 )
 
 [node name="FenceSpawner5" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52453, 0.1, 9.80917 )
+jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -232,6 +223,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69754, 0, -0.562301 )
 
 [node name="FenceSpawner7" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2372, 0.1, 14.1159 )
+jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -241,6 +233,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0514, 0, -0.208153 )
 
 [node name="FenceSpawner8" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01842, 0.1, 14.3443 )
+jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -250,6 +243,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.603, 9.53674e-07, -0.768869
 
 [node name="FenceSpawner6" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52453, 0.1, 7.72806 )
+jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -259,6 +253,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69754, 0, -0.562301 )
 
 [node name="FenceSpawner2" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9682, 0.1, 2.61721 )
+jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -268,6 +263,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333719, 0, -6.31976 )
 
 [node name="FenceSpawner3" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8947, 0.1, 2.66511 )
+jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -277,6 +273,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05298, 0, -0.548589 )
 
 [node name="FenceSpawner4" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8437, 0.1, -2.98814 )
+jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
