@@ -1,4 +1,5 @@
 extends Spatial
+class_name Collectable
 
 var collected = false
 

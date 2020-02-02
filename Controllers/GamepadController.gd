@@ -5,6 +5,7 @@ const HORIZONTAL_AXIS = JOY_AXIS_0
 const VERTICAL_AXIS = JOY_AXIS_1
 export(int) var player_index: int = 0
 export(int) var catch_or_repair: int = JOY_XBOX_A
+export(int) var drop: int = JOY_XBOX_B
 
 func _on_joy_connection_changed(device_id, connected):
 	print("Connection change. This device: %s, %s. Total: %s" % [device_id, connected, Input.get_connected_joypads().size()])
@@ -33,5 +34,9 @@ func _unhandled_input(event):
 		_handle_input(event as InputEventJoypadButton)
 
 func _handle_input(event: InputEventJoypadButton):
-	if event.pressed and event.button_index == catch_or_repair:
+	if not event.pressed:
+		return
+	if event.button_index == catch_or_repair:
 		get_parent().main_action()
+	if event.button_index == drop:
+		get_parent().cancelly_action()

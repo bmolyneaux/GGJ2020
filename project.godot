@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Spatial",
+"class": "Collectable",
+"language": "GDScript",
+"path": "res://Collectables/Collectable.gd"
+}, {
+"base": "Spatial",
 "class": "Repairable",
 "language": "GDScript",
 "path": "res://Repairable/Repairable.gd"
@@ -20,6 +25,7 @@ _global_script_classes=[ {
 "path": "res://Repairer/repairer.gd"
 } ]
 _global_script_class_icons={
+"Collectable": "",
 "Repairable": "",
 "Repairer": ""
 }

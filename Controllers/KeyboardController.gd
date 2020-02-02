@@ -5,6 +5,7 @@ export(int) var down: int = KEY_S
 export(int) var left: int = KEY_A
 export(int) var right: int = KEY_D
 export(int) var catch_or_repair: int = KEY_SPACE
+export(int) var drop: int = KEY_SHIFT
 
 func _physics_process(delta):
 	var input = Vector2(0, 0)
@@ -23,5 +24,9 @@ func _physics_process(delta):
 	get_parent().set_input(input)
 
 func _unhandled_key_input(event):
-	if event.pressed and event.scancode == catch_or_repair:
+	if not event.pressed:
+		return
+	if event.scancode == catch_or_repair:
 		get_parent().main_action()
+	if event.scancode == drop:
+		get_parent().cancelly_action()

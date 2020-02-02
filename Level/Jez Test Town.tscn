@@ -11,6 +11,7 @@
 [node name="Spatial" type="Spatial"]
 
 [node name="Repairable" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.51565, -2.38419e-07, -6.85662 )
 
 [node name="Repairable5" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.54865, 2.38419e-07, 2.09873 )

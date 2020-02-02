@@ -40,3 +40,6 @@ func set_input(value : Vector2):
 func main_action():
 	# Nothing yet.
 	pass
+
+func cancelly_action():
+	pass
