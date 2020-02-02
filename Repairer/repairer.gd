@@ -106,6 +106,7 @@ func can_be_caught():
 	return caught_cooldown <= 0
 
 func get_caught():
+	_drop_all_cds()
 	caught_cooldown = caught_cooldown_length
 
 func get_speed():
