@@ -38,4 +38,6 @@ config/icon="res://icon.png"
 
 [rendering]
 
+quality/directional_shadow/size=1024
+quality/directional_shadow/size.mobile=1024
 environment/default_environment="res://default_env.tres"
