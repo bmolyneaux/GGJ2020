@@ -66,15 +66,6 @@ func _process(delta):
 		caught_cooldown -= delta
 		if caught_cooldown < 0:
 			caught_cooldown = 0
-	
-	if caught_cooldown > 0:
-		scale.y = 1.3
-		scale.x = 0.7
-		scale.z = 0.7
-	else:
-		scale.x = 1
-		scale.y = 1
-		scale.z = 1
 
 # Reacting to inputs
 func set_input(value : Vector2):
