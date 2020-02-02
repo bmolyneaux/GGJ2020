@@ -56,15 +56,20 @@ func _process(delta):
 func _restart():
 	get_tree().reload_current_scene()
 
+func _maybe_restart():
+	if game_won:
+		_restart()
+
 func _unhandled_input(event):
 	if not event.is_pressed():
 		return
 	if event is InputEventKey:
 		var key := event as InputEventKey
-		if (key.scancode == KEY_R or
-			key.scancode == KEY_ENTER):
+		if key.scancode == KEY_R:
 			_restart()
+		if key.scancode == KEY_ENTER:
+			_maybe_restart()
 	if event is InputEventJoypadButton:
 		var button := event as InputEventJoypadButton
 		if button.button_index == JOY_START:
-			_restart()
+			_maybe_restart()
