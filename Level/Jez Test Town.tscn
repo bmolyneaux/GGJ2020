@@ -62,7 +62,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60092, -0.0174866, 2.86848 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05854, -0.0174866, 4.01381 )
 
 [node name="CD7" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05854, -0.0174866, 4.01381 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52671, -0.0174866, 4.66798 )
 
 [node name="CD6" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.996201, -0.0174866, 1.94262 )
