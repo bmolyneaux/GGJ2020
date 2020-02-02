@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/BoomBox Dull.PNG" type="Texture" id=6]
 [ext_resource path="res://Assets/BoomBox Vivid.PNG" type="Texture" id=7]
 [ext_resource path="res://Assets/Cat Happy.PNG" type="Texture" id=8]
-[ext_resource path="res://Assets/Cat Caught.PNG" type="Texture" id=9]
+[ext_resource path="res://Assets/Cat Caught 2.PNG" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -221,28 +221,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -33.4299
+margin_left = 80.7539
 margin_top = -55.4636
-margin_right = 120.57
+margin_right = 234.754
 margin_bottom = 100.536
-rect_scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-first = ExtResource( 6 )
-second = ExtResource( 7 )
-
-[node name="TextureRect4" type="TextureRect" parent="SharedUI/BoomBoxes"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 72.4906
-margin_top = -54.7124
-margin_right = 226.491
-margin_bottom = 101.288
 rect_scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 6 )
 script = ExtResource( 5 )
