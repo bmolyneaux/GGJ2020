@@ -91,7 +91,7 @@ func cancelly_action():
 
 func _pick_up_nearby_cds():
 	# Look for cool CD-ROMs
-	var bodies = $Area.get_overlapping_bodies()
+	var bodies = $Area.get_overlapping_areas()
 	for body in bodies:
 		var collectable = body.get_parent()
 		if not collectable.is_in_group("Collectable"):
