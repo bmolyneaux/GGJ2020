@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Repairer/repairer.gd" type="Script" id=1]
-[ext_resource path="res://Assets/KittyCat.fbx" type="PackedScene" id=2]
-[ext_resource path="res://Repairer/KittyCat.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/DustCloud.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://Assets/KittyCat.fbx" type="PackedScene" id=3]
 [ext_resource path="res://Sfx/get_caught.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sfx/drop.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Sfx/pickup.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Repairer/KittyCat.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -18,15 +19,18 @@ albedo_color = Color( 0.435294, 0.301961, 0.188235, 1 )
 radius = 0.836404
 height = 0.922658
 
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0, 0 ), 0.0, 2.42054, 0, 0, Vector2( 0.5, 0.5176 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -2.52861, 0.0, 0, 0 ]
+
 [node name="Repairer" type="KinematicBody"]
 script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0.3, 0 )
+transform = Transform( 0.2, 0, 0, 0, -8.74228e-009, 0.2, 0, -0.2, -8.74228e-009, 0, 0.3, 0 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 0.2, 0, 0, 0, -8.74228e-09, 0.2, 0, -0.2, -8.74228e-09, 0, 0.3, 0 )
+transform = Transform( 0.2, 0, 0, 0, -8.74228e-009, 0.2, 0, -0.2, -8.74228e-009, 0, 0.3, 0 )
 visible = false
 mesh = SubResource( 2 )
 material/0 = SubResource( 3 )
@@ -37,11 +41,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 4 )
 
-[node name="KittyCatOld" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
+[node name="KittyCatOld" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -3.25841e-007, 0, 1, 0, 3.25841e-007, 0, -1, 0, 0, 0 )
 visible = false
 
-[node name="KittyCat" parent="." instance=ExtResource( 3 )]
+[node name="KittyCat" parent="." instance=ExtResource( 7 )]
 
 [node name="FallSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
@@ -52,3 +56,18 @@ stream = ExtResource( 5 )
 
 [node name="PickupSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+
+[node name="CPUParticles" type="CPUParticles" parent="."]
+amount = 7
+lifetime = 0.8
+randomness = 0.2
+lifetime_randomness = 0.2
+local_coords = false
+mesh = ExtResource( 2 )
+spread = 180.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.2
+initial_velocity_random = 0.1
+scale_amount = 0.1
+scale_amount_random = 0.08
+scale_amount_curve = SubResource( 5 )
