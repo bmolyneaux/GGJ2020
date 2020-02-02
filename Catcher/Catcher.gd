@@ -23,6 +23,7 @@ func _physics_process(delta):
 		
 	move_and_slide(movement, Vector3(0, 1, 0))
 	$PuppyDog.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
+	$PuppyDog.rotate_x(-0.4)
 
 	var bodies = $Area.get_overlapping_bodies()
 	for body in bodies:

@@ -37,6 +37,7 @@ func _physics_process(delta):
 		
 	move_and_slide(movement, Vector3(0, 1, 0))
 	$KittyCat.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
+	$KittyCat.rotate_x(-0.4)
 
 	var moving := speed.length_squared() > 50 * 50
 	if num_collected > 0:
