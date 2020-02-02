@@ -12,6 +12,8 @@ const caught_cooldown_length := 3.0
 
 func _ready():
 	add_to_group("player")
+	$KittyCat.get_node("AnimationPlayer").get_animation("Walk").loop = true
+	$KittyCat.get_node("AnimationPlayer").play("Walk")
 
 func _physics_process(delta):
 	var desired_speed = input * max_speed
