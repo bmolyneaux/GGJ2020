@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Repairable/Repairable.gd" type="Script" id=1]
+[ext_resource path="res://UI/RepairCount.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -21,3 +22,15 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 2 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 2.24761, 0.038794 )
+billboard = 1
+
+[node name="Viewport" type="Viewport" parent="."]
+size = Vector2( 24, 24 )
+transparent_bg = true
+usage = 0
+render_target_v_flip = true
+
+[node name="RepairCount" parent="Viewport" instance=ExtResource( 2 )]
