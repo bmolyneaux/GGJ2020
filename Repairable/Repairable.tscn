@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Repairable/Repairable.gd" type="Script" id=1]
 [ext_resource path="res://UI/RepairCount.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Sfx/insert.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Sfx/record_scratch.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Radio.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CylinderMesh" id=1]
 
@@ -16,6 +17,7 @@ script = ExtResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+visible = false
 mesh = SubResource( 1 )
 material/0 = null
 
@@ -42,3 +44,6 @@ stream = ExtResource( 3 )
 
 [node name="FixSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[node name="Radio" parent="." instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, 1, -0.244123, 0.969744, -1.06709e-08, -0.969744, -0.244123, -4.23889e-08, 0, 0, 0 )
