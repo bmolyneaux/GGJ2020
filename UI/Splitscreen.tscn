@@ -1,9 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Level/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://UI/8bitwonderfontdata.tres" type="DynamicFontData" id=2]
 [ext_resource path="res://UI/CameraPivot.gd" type="Script" id=3]
 [ext_resource path="res://Game/GameManager.gd" type="Script" id=4]
+[ext_resource path="res://UI/SpriteSwitcher.gd" type="Script" id=5]
+[ext_resource path="res://Assets/BoomBox Dull.PNG" type="Texture" id=6]
+[ext_resource path="res://Assets/BoomBox Vivid.PNG" type="Texture" id=7]
+[ext_resource path="res://Assets/Cat Happy.PNG" type="Texture" id=8]
+[ext_resource path="res://Assets/Cat Caught.PNG" type="Texture" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -133,14 +138,23 @@ index = 3
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
 current = true
 
-[node name="SharedUI" type="Node2D" parent="."]
+[node name="SharedUI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="WinnerText" type="RichTextLabel" parent="SharedUI"]
-margin_left = 225.715
-margin_top = 253.715
-margin_right = 779.715
-margin_bottom = 359.715
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -277.0
+margin_top = -53.0
+margin_right = 277.0
+margin_bottom = 53.0
 custom_fonts/normal_font = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -152,3 +166,155 @@ margin_bottom = 91.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BoomBoxes" type="Control" parent="SharedUI"]
+anchor_left = 0.253
+anchor_top = 0.506
+anchor_right = 0.253
+anchor_bottom = 0.506
+margin_left = -253.072
+margin_top = -53.6
+margin_right = 252.928
+margin_bottom = 53.4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="SharedUI/BoomBoxes"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -142.355
+margin_top = -56.2149
+margin_right = 11.6448
+margin_bottom = 99.7851
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first = ExtResource( 6 )
+second = ExtResource( 7 )
+
+[node name="TextureRect2" type="TextureRect" parent="SharedUI/BoomBoxes"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -34.1811
+margin_top = -56.2148
+margin_right = 119.819
+margin_bottom = 99.7852
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first = ExtResource( 6 )
+second = ExtResource( 7 )
+
+[node name="TextureRect3" type="TextureRect" parent="SharedUI/BoomBoxes"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -33.4299
+margin_top = -55.4636
+margin_right = 120.57
+margin_bottom = 100.536
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first = ExtResource( 6 )
+second = ExtResource( 7 )
+
+[node name="TextureRect4" type="TextureRect" parent="SharedUI/BoomBoxes"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 72.4906
+margin_top = -54.7124
+margin_right = 226.491
+margin_bottom = 101.288
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first = ExtResource( 6 )
+second = ExtResource( 7 )
+
+[node name="Cats" type="Control" parent="SharedUI"]
+anchor_left = 0.747
+anchor_top = 0.506
+anchor_right = 0.747
+anchor_bottom = 0.506
+margin_left = -252.928
+margin_top = -53.6
+margin_right = 253.072
+margin_bottom = 53.4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="SharedUI/Cats"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.57
+margin_top = -48.698
+margin_right = 33.4299
+margin_bottom = 113.302
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first = ExtResource( 8 )
+second = ExtResource( 9 )
+
+[node name="TextureRect5" type="TextureRect" parent="SharedUI/Cats"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -27.1476
+margin_top = -49.6376
+margin_right = 126.852
+margin_bottom = 112.362
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first = ExtResource( 8 )
+second = ExtResource( 9 )
+
+[node name="TextureRect6" type="TextureRect" parent="SharedUI/Cats"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 67.2322
+margin_top = -47.1956
+margin_right = 221.232
+margin_bottom = 114.804
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 8 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+first = ExtResource( 8 )
+second = ExtResource( 9 )
