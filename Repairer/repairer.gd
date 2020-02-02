@@ -40,16 +40,20 @@ func _physics_process(delta):
 	$KittyCat.rotate_x(-0.4)
 
 	var moving := speed.length_squared() > 50 * 50
-	if num_collected > 0:
-		if moving:
-			$KittyCat.get_node("AnimationPlayer").play("Holding Walk")
-		else:
-			$KittyCat.get_node("AnimationPlayer").play("HoldingIdle")
+	var anim_player = $KittyCat.get_node("AnimationPlayer")
+	if anim_player.get_current_animation() == "Tackled" and anim_player.is_playing():
+		pass
 	else:
-		if moving:
-			$KittyCat.get_node("AnimationPlayer").play("Walk")
+		if num_collected > 0:
+			if moving:
+				$KittyCat.get_node("AnimationPlayer").play("Holding Walk")
+			else:
+				$KittyCat.get_node("AnimationPlayer").play("HoldingIdle")
 		else:
-			$KittyCat.get_node("AnimationPlayer").play("Idle")
+			if moving:
+				$KittyCat.get_node("AnimationPlayer").play("Walk")
+			else:
+				$KittyCat.get_node("AnimationPlayer").play("Idle")
 			
 	var is_walking = $KittyCat.get_node("AnimationPlayer").current_animation == "Walk"
 	$RunParticles.emitting = is_walking
@@ -136,6 +140,7 @@ func can_be_caught():
 func get_caught():
 	_drop_all_cds()
 	caught_cooldown = caught_cooldown_length
+	$KittyCat.get_node("AnimationPlayer").play("Tackled")
 	$FallSfx.play()
 
 func get_speed():
