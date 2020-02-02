@@ -13,14 +13,16 @@ __meta__ = {
 [node name="GridContainer" type="GridContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_constants/vseparation = 0
+custom_constants/hseparation = 0
 columns = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ViewportContainer" type="ViewportContainer" parent="GridContainer"]
-margin_right = 510.0
-margin_bottom = 298.0
+margin_right = 512.0
+margin_bottom = 300.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch = true
@@ -29,9 +31,10 @@ __meta__ = {
 }
 
 [node name="Viewport" type="Viewport" parent="GridContainer/ViewportContainer"]
-size = Vector2( 510, 298 )
+size = Vector2( 512, 300 )
 handle_input_locally = false
 render_target_update_mode = 3
+shadow_atlas_size = 1
 
 [node name="CameraPivot" type="Spatial" parent="GridContainer/ViewportContainer/Viewport"]
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0 )
@@ -44,9 +47,9 @@ current = true
 [node name="World" parent="GridContainer/ViewportContainer/Viewport" instance=ExtResource( 1 )]
 
 [node name="ViewportContainer2" type="ViewportContainer" parent="GridContainer"]
-margin_left = 514.0
+margin_left = 512.0
 margin_right = 1024.0
-margin_bottom = 298.0
+margin_bottom = 300.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 stretch = true
@@ -55,9 +58,10 @@ __meta__ = {
 }
 
 [node name="Viewport" type="Viewport" parent="GridContainer/ViewportContainer2"]
-size = Vector2( 510, 298 )
+size = Vector2( 512, 300 )
 handle_input_locally = false
 render_target_update_mode = 3
+shadow_atlas_size = 1
 
 [node name="CameraPivot" type="Spatial" parent="GridContainer/ViewportContainer2/Viewport"]
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0 )
@@ -69,8 +73,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )
 current = true
 
 [node name="ViewportContainer3" type="ViewportContainer" parent="GridContainer"]
-margin_top = 302.0
-margin_right = 510.0
+margin_top = 300.0
+margin_right = 512.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -80,9 +84,10 @@ __meta__ = {
 }
 
 [node name="Viewport" type="Viewport" parent="GridContainer/ViewportContainer3"]
-size = Vector2( 510, 298 )
+size = Vector2( 512, 300 )
 handle_input_locally = false
 render_target_update_mode = 3
+shadow_atlas_size = 1
 
 [node name="CameraPivot" type="Spatial" parent="GridContainer/ViewportContainer3/Viewport"]
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0 )
@@ -94,8 +99,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )
 current = true
 
 [node name="ViewportContainer4" type="ViewportContainer" parent="GridContainer"]
-margin_left = 514.0
-margin_top = 302.0
+margin_left = 512.0
+margin_top = 300.0
 margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_horizontal = 3
@@ -106,9 +111,10 @@ __meta__ = {
 }
 
 [node name="Viewport" type="Viewport" parent="GridContainer/ViewportContainer4"]
-size = Vector2( 510, 298 )
+size = Vector2( 512, 300 )
 handle_input_locally = false
 render_target_update_mode = 3
+shadow_atlas_size = 1
 
 [node name="CameraPivot" type="Spatial" parent="GridContainer/ViewportContainer4/Viewport"]
 transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0, 0, 0 )
