@@ -60,7 +60,9 @@ func main_action():
 	repair()
 
 func cancelly_action():
-	_drop_all_cds()
+	if num_collected <= 0:
+		return
+	_drop_cd()
 
 func _pick_up_nearby_cds():
 	# Look for cool CD-ROMs
@@ -76,14 +78,18 @@ func _pick_up_nearby_cds():
 
 func _drop_all_cds():
 	for i in range(num_collected):
-		var cd := cd_node.instance() as Collectable
-		cd.translation = (
-			translation
-			+ (rng.randf_range(-1, 1) * Vector3.LEFT)
-			+ (rng.randf_range(-1, 1) * Vector3.FORWARD)
-		)
-		get_parent().add_child(cd)
+		_drop_cd()
 	num_collected = 0
+
+func _drop_cd():
+	var cd := cd_node.instance() as Collectable
+	cd.translation = (
+		translation
+		+ (rng.randf_range(-1, 1) * Vector3.LEFT)
+		+ (rng.randf_range(-1, 1) * Vector3.FORWARD)
+	)
+	get_parent().add_child(cd)
+	num_collected -= 1
 
 func repair():
 	if num_collected <= 0:
