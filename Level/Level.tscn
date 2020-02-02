@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Repairer/Repairer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Repairer/PlayerController.gd" type="Script" id=2]
+[ext_resource path="res://Controllers/KeyboardController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Environment/material_grass.tres" type="Material" id=3]
 [ext_resource path="res://Environment/Block.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Environment/material_block.tres" type="Material" id=5]
@@ -118,8 +118,7 @@ carry_speed = null
 hurt_speed = null
 gravity_speed = null
 
-[node name="PlayerController" type="Node" parent="Players/Repairer"]
-script = ExtResource( 2 )
+[node name="KeyboardController" parent="Players/Repairer" instance=ExtResource( 2 )]
 
 [node name="Repairer2" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.74952, 0.1, -5.76348 )
@@ -130,8 +129,7 @@ carry_speed = null
 hurt_speed = null
 gravity_speed = null
 
-[node name="PlayerController" type="Node" parent="Players/Repairer2"]
-script = ExtResource( 2 )
+[node name="KeyboardController" parent="Players/Repairer2" instance=ExtResource( 2 )]
 
 [node name="Repairer3" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.80523, 0.1, 8.98917 )
@@ -142,8 +140,7 @@ carry_speed = null
 hurt_speed = null
 gravity_speed = null
 
-[node name="PlayerController" type="Node" parent="Players/Repairer3"]
-script = ExtResource( 2 )
+[node name="KeyboardController" parent="Players/Repairer3" instance=ExtResource( 2 )]
 
 [node name="Catcher" parent="Players" instance=ExtResource( 9 )]
 index = 3
@@ -151,8 +148,7 @@ acceleration = null
 max_speed = null
 gravity_speed = null
 
-[node name="PlayerController" type="Node" parent="Players/Catcher"]
-script = ExtResource( 2 )
+[node name="KeyboardController" parent="Players/Catcher" instance=ExtResource( 2 )]
 
 [node name="Collectables" type="Spatial" parent="."]
 
@@ -161,6 +157,36 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4878, 0.12519, 4.67103 )
 
 [node name="CD2" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65039, 0.12519, 2.05873 )
+
+[node name="CD7" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25651, 0.12519, -0.654533 )
+
+[node name="CD8" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.229717, 0.12519, -1.51995 )
+
+[node name="CD11" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.72154, 0.12519, 9.76476 )
+
+[node name="CD12" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5363, 0.12519, 8.77822 )
+
+[node name="CD13" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53142, 0.125189, -0.826247 )
+
+[node name="CD14" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7477, 0.125189, -5.16116 )
+
+[node name="CD15" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.91978, 0.125189, -4.67706 )
+
+[node name="CD16" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.25046, 0.125189, -11.9714 )
+
+[node name="CD9" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19734, 0.12519, -0.0194736 )
+
+[node name="CD10" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19734, 0.12519, -0.0194736 )
 
 [node name="CD3" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63852, 0.12519, 3.45696 )
