@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Repairer/Repairer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controllers/KeyboardController.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Collectables/Collectable.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Repairable/Repairable.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Catcher/Catcher.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Environment/Bridge.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Environment/bush.mesh" type="ArrayMesh" id=11]
 [ext_resource path="res://Controllers/GamepadController.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/sm_palmSmall.fbx" type="PackedScene" id=13]
@@ -18,10 +19,12 @@
 [ext_resource path="res://addons/mixing-desk/music/song.gd" type="Script" id=17]
 [ext_resource path="res://addons/mixing-desk/music/mixing_desk_music.gd" type="Script" id=18]
 [ext_resource path="res://addons/mixing-desk/music/containers/core_cont.gd" type="Script" id=19]
-[ext_resource path="res://Music/layer1.ogg" type="AudioStream" id=20]
-[ext_resource path="res://Music/layer3.ogg" type="AudioStream" id=21]
-[ext_resource path="res://Music/layer2.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Music/town normal.ogg" type="AudioStream" id=20]
+[ext_resource path="res://Music/town big ups massive rastahgwan brrat.ogg" type="AudioStream" id=21]
 [ext_resource path="res://Level/Music.gd" type="Script" id=23]
+[ext_resource path="res://Environment/House.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Environment/PalmBig.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Environment/PalmSmall.tscn" type="PackedScene" id=26]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -58,7 +61,7 @@ environment = SubResource( 2 )
 [node name="World" type="Spatial" parent="."]
 
 [node name="Ground" parent="World" instance=ExtResource( 4 )]
-transform = Transform( 16.8821, 0, 0, 0, 0.1, 0, 0, 0, 16.8821, 0, 0, -3.31234 )
+transform = Transform( 16.8821, 0, 0, 0, 0.1, 0, 0, 0, 14.0915, 0, 0, -0.466721 )
 use_in_baked_light = true
 material/0 = ExtResource( 3 )
 
@@ -68,7 +71,7 @@ use_in_baked_light = true
 material/0 = ExtResource( 5 )
 
 [node name="Block8" parent="World" instance=ExtResource( 4 )]
-transform = Transform( -6.05111e-07, 0, 1, 0, 0.426974, 0, -13.8433, 0, -4.37114e-08, -14.2065, 0.504861, -0.98245 )
+transform = Transform( -6.05111e-07, 0, 1, 0, 0.426974, 0, -14.5769, 0, -4.6028e-08, -14.2065, 0.504861, -0.98245 )
 material/0 = ExtResource( 5 )
 
 [node name="Block15" parent="World" instance=ExtResource( 4 )]
@@ -83,42 +86,40 @@ material/0 = ExtResource( 5 )
 transform = Transform( 1, 0, 0, 0, 0.426974, 0, 0, 0, 1, -9.77569, 0.504861, -9.33895 )
 material/0 = ExtResource( 5 )
 
-[node name="Block10" parent="World" instance=ExtResource( 4 )]
-transform = Transform( 2.22177, 0, 0, 0, 0.426974, 0, 0, 0, 2.22177, -3.20408, 0.504861, -8.17022 )
-material/0 = ExtResource( 5 )
-
 [node name="Block12" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1.04361, 0, 0, 0, 0.426974, 0, 0, 0, 1.00026, 10.6646, 0.504861, 5.01029 )
 material/0 = ExtResource( 5 )
 
 [node name="Block13" parent="World" instance=ExtResource( 4 )]
-transform = Transform( 1.04361, 0, 0, 0, 0.426974, 0, 0, 0, 1.00026, 10.6646, 0.504861, 2.27238 )
-material/0 = ExtResource( 5 )
-
-[node name="Block14" parent="World" instance=ExtResource( 4 )]
-transform = Transform( 14.8853, 0, 0, 0, 0.426974, 0, 0, 0, 1.00026, 1.31212, 0.504861, -13.9532 )
-material/0 = ExtResource( 5 )
+transform = Transform( 1.04361, 0, 0, 0, 1.03918, 0, 0, 0, 1.00026, 10.6646, 0.504861, 2.27238 )
 
 [node name="Block6" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1.66381, 0, 0, 0, 0.426974, 0, 0, 0, 1.76347, -6.08875, 0.504865, -0.927485 )
 material/0 = ExtResource( 5 )
 
 [node name="Block4" parent="World" instance=ExtResource( 4 )]
-transform = Transform( 2.32021, 0, 0, 0, 0.298404, 0, 0, 0, 6.01095, 5.03067, 0.352553, 2.57256 )
-material/0 = ExtResource( 5 )
+transform = Transform( 2.32021, 0, 0, 0, 0.442428, 0, 0, 0, 6.01095, 5.03067, 0.352553, 2.57256 )
 
 [node name="Ramp1" parent="World" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 0.289355, 0, 0, 0, 1, 1.73032, 0.366486, 2.66615 )
+
+[node name="Ramp2" parent="World" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 0.432375, 0, 0, 0, 1, 6.3047, 1.12971, 2.66615 )
 
 [node name="MeshInstance" type="MeshInstance" parent="World"]
 transform = Transform( 14.6675, 0, 0, 0, 0.996296, -0.150149, 0, 0.0859908, 1.73963, 0, -0.107123, 15.2742 )
 mesh = SubResource( 3 )
 material/0 = SubResource( 4 )
 
+[node name="MeshInstance2" type="MeshInstance" parent="World"]
+transform = Transform( -14.6675, 0, -5.68951e-07, 6.90001e-07, 0.989523, -0.25209, 4.72921e-06, -0.144373, -1.7278, 0.0285244, -0.107123, -15.9845 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 4 )
+
 [node name="Players" type="Spatial" parent="."]
 
 [node name="Repairer" parent="Players" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.64838, 0.1, -6.57013 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.52222, 0.0999995, 4.86976 )
 
 [node name="KeyboardController" parent="Players/Repairer" instance=ExtResource( 2 )]
 
@@ -136,6 +137,7 @@ index = 2
 player_index = 1
 
 [node name="Catcher" parent="Players" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.162421, 0, 0.422205 )
 index = 3
 
 [node name="GamepadController" parent="Players/Catcher" instance=ExtResource( 12 )]
@@ -145,6 +147,54 @@ player_index = 2
 
 [node name="CD1" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4878, 0.12519, 4.67103 )
+
+[node name="CD19" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4733, 0.12519, 11.1203 )
+
+[node name="CD20" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50775, 0.12519, 10.9942 )
+
+[node name="CD21" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.60496, 0.12519, 2.21328 )
+
+[node name="CD22" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.81559, 0.875756, 3.04137 )
+
+[node name="CD23" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.04688, 0.875757, 7.18214 )
+
+[node name="CD24" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.38762, 0.875756, -1.9485 )
+
+[node name="CD25" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78716, 0.169795, -10.5646 )
+
+[node name="CD26" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.72247, 0.169795, -6.33617 )
+
+[node name="CD27" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.16014, 0.169795, 5.22153 )
+
+[node name="CD28" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59956, 0.169795, 7.38011 )
+
+[node name="CD29" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.82144, 0.835949, 0.714774 )
+
+[node name="CD30" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104961, 0.190012, 4.18021 )
+
+[node name="CD31" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.56654, 0.190013, 10.3479 )
+
+[node name="CD32" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.61023, 0.190013, 2.32601 )
+
+[node name="CD33" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80616, 0.190013, 9.59881 )
+
+[node name="CD34" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0545, 0.190013, -2.85336 )
 
 [node name="CD2" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65039, 0.12519, 2.05873 )
@@ -191,19 +241,28 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.24371, 0.12519, 10.452 )
 [node name="CD6" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.59704, 0.12519, 3.00588 )
 
+[node name="CD17" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.29248, 1.72655, 2.32964 )
+
+[node name="CD18" parent="Collectables" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6004, 0.81916, 5.23872 )
+
 [node name="Radios" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Repairable" parent="Radios" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7584, 0, 10.8497 )
 
 [node name="Repairable2" parent="Radios" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8319, 0, -2.7046 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.377065, 0, -10.7427 )
+
+[node name="Repairable3" parent="Radios" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9329, 0.115152, 11.0719 )
 
 [node name="Fences" type="Spatial" parent="."]
 
 [node name="FenceSpawner" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.94402, 0.1, 2.61721 )
-jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -211,9 +270,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
 [node name="End" type="Spatial" parent="Fences/FenceSpawner"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333719, 0, -6.18572 )
 
+[node name="FenceSpawner9" parent="Fences" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0598, 0.1, -13.7305 )
+
+[node name="Start" type="Spatial" parent="Fences/FenceSpawner9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
+
+[node name="End" type="Spatial" parent="Fences/FenceSpawner9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.1035, 0, 0.85021 )
+
 [node name="FenceSpawner5" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52453, 0.1, 9.80917 )
-jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -223,7 +290,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69754, 0, -0.562301 )
 
 [node name="FenceSpawner7" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2372, 0.1, 14.1159 )
-jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -233,7 +299,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0514, 0, -0.208153 )
 
 [node name="FenceSpawner8" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01842, 0.1, 14.3443 )
-jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -243,7 +308,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.603, 9.53674e-07, -0.768869
 
 [node name="FenceSpawner6" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52453, 0.1, 7.72806 )
-jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -253,7 +317,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69754, 0, -0.562301 )
 
 [node name="FenceSpawner2" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9682, 0.1, 2.61721 )
-jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -263,7 +326,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333719, 0, -6.31976 )
 
 [node name="FenceSpawner3" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8947, 0.1, 2.66511 )
-jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -273,7 +335,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05298, 0, -0.548589 )
 
 [node name="FenceSpawner4" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8437, 0.1, -2.98814 )
-jank = 1.0
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -292,6 +353,15 @@ transform = Transform( 0.988722, -0.14976, 0, 0.142406, 0.940176, 0.191591, -0.0
 [node name="Tree2" parent="Trees" instance=ExtResource( 14 )]
 transform = Transform( 0.988722, -0.14976, 0, 0.142406, 0.940176, 0.191591, -0.0463504, -0.306008, 0.588644, -0.644202, -0.00193524, 8.65612 )
 
+[node name="sm_palmBig" parent="Trees" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.62876, 0.1, -9.25428 )
+
+[node name="sm_palmSmall2" parent="Trees" instance=ExtResource( 26 )]
+transform = Transform( 0.774654, 0, 0, 0, 0.765628, 0.11791, 0, -0.11791, 0.765628, 4.06852, -0.00627267, -7.82465 )
+
+[node name="sm_palmSmall3" parent="Trees" instance=ExtResource( 26 )]
+transform = Transform( 0.774654, 0, 0, 0, 0.765628, 0.11791, 0, -0.11791, 0.765628, -0.68497, -0.00627267, -7.40205 )
+
 [node name="bush" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.60752, -0.170648, 8.18254 )
 use_in_baked_light = true
@@ -299,33 +369,58 @@ mesh = ExtResource( 11 )
 material/0 = null
 
 [node name="bush2" type="MeshInstance" parent="."]
-transform = Transform( 0.775452, -0.0962369, -0.62403, 0, 0.988316, -0.152417, 0.631407, 0.118192, 0.766392, -3.84684, -0.170648, 7.94057 )
+transform = Transform( 0.775452, -0.0962369, -0.62403, 0, 0.988316, -0.152417, 0.631407, 0.118192, 0.766392, -3.84684, -0.170648, 7.80558 )
 use_in_baked_light = true
 mesh = ExtResource( 11 )
 material/0 = null
 
-[node name="Music" type="Node" parent="."]
+[node name="Music" type="Node" parent="." groups=[
+"Music",
+]]
 script = ExtResource( 23 )
 
 [node name="MixingDeskMusic" type="Node" parent="Music"]
 script = ExtResource( 18 )
 play_mode = 1
-autoplay = NodePath("Song")
+autoplay = NodePath("Song1")
 
-[node name="Song" type="Node" parent="Music/MixingDeskMusic"]
+[node name="Song1" type="Node" parent="Music/MixingDeskMusic"]
 script = ExtResource( 17 )
 tempo = 120
-bars = 2
+bars = 40
 beats_in_bar = 4
 
-[node name="CoreContainer" type="Node" parent="Music/MixingDeskMusic/Song"]
+[node name="CoreContainer" type="Node" parent="Music/MixingDeskMusic/Song1"]
 script = ExtResource( 19 )
 
-[node name="Drums" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song/CoreContainer"]
+[node name="Track" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song1/CoreContainer"]
 stream = ExtResource( 20 )
 
-[node name="Snare" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song/CoreContainer"]
-stream = ExtResource( 22 )
+[node name="Song2" type="Node" parent="Music/MixingDeskMusic"]
+script = ExtResource( 17 )
+tempo = 120
+bars = 56
+beats_in_bar = 4
 
-[node name="Synth" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song/CoreContainer"]
+[node name="CoreContainer" type="Node" parent="Music/MixingDeskMusic/Song2"]
+script = ExtResource( 19 )
+
+[node name="Track" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song2/CoreContainer"]
 stream = ExtResource( 21 )
+
+[node name="Bridge" type="Spatial" parent="."]
+
+[node name="sm_bridgePiece" parent="Bridge" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.77296, 1.52015, 2.29978 )
+
+[node name="sm_bridgePiece2" parent="Bridge" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75217, 1.52015, 2.29978 )
+
+[node name="sm_bridgePiece3" parent="Bridge" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.72847, 1.52015, 2.29978 )
+
+[node name="sm_house" parent="." instance=ExtResource( 24 )]
+transform = Transform( 0.22881, 0, 0.973471, 0, 1, 0, -0.973471, 0, 0.22881, -3.66437, -0.168025, -7.30548 )
+
+[node name="sm_house2" parent="." instance=ExtResource( 24 )]
+transform = Transform( -0.370217, 0, 0.928945, 0, 1, 0, -0.928945, 0, -0.370217, 9.15233, -0.168026, -9.01409 )

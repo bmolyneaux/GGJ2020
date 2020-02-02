@@ -1,6 +1,8 @@
 extends Spatial
 class_name Repairable
 
+signal on_repaired()
+
 export(bool) var repaired := false
 var repair_time : int
 
@@ -18,6 +20,7 @@ func repair():
 		repair_time = OS.get_ticks_msec()
 		$Radio.start_animation()
 		$FixSfx.play()
+		get_tree().get_nodes_in_group("Music")[0].next_song()
 	$InsertSfx.play()
 	_updateText()
 
