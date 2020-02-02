@@ -93,6 +93,7 @@ func _pick_up_nearby_cds():
 			continue
 		collectable.collect()
 		num_collected += 1
+		$PickupSfx.play()
 
 func _drop_all_cds():
 	for i in range(num_collected):
