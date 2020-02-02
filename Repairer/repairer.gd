@@ -62,10 +62,6 @@ func main_action():
 func cancelly_action():
 	_drop_all_cds()
 
-func _unhandled_key_input(event):
-	if event.pressed and event.scancode == KEY_SPACE:
-		repair()
-
 func _pick_up_nearby_cds():
 	# Look for cool CD-ROMs
 	var bodies = $Area.get_overlapping_bodies()
@@ -73,7 +69,7 @@ func _pick_up_nearby_cds():
 		var collectable = body.get_parent()
 		if not collectable.is_in_group("Collectable"):
 			continue
-		if collectable.collected:
+		if not collectable.can_collect():
 			continue
 		collectable.collect()
 		num_collected += 1
