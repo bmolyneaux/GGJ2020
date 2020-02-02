@@ -43,7 +43,7 @@ func _physics_process(delta):
 	current_rotation.y = topdown_angle
 	current_rotation.x = anim_turning*0.1
 	set_rotation(current_rotation)
-	print(topdown_angle)
+	#print(topdown_angle)
 		
 	
 	if gogogo:
