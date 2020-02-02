@@ -6,6 +6,8 @@ export var acceleration := 10
 export var regular_speed := 250
 export var carry_speed := 150
 export var hurt_speed := 400
+# TODO: Gravity should be an acceleration
+export var gravity_speed := -150
 var speed := Vector2(0, 0)
 var input : Vector2
 var num_collected := 0
@@ -22,7 +24,7 @@ func _physics_process(delta):
 	
 	speed = lerp(speed, desired_speed, 0.2)
 	
-	var movement = Vector3(speed.x, 0, speed.y) * delta
+	var movement = Vector3(speed.x, gravity_speed, speed.y) * delta
 		
 	move_and_slide(movement, Vector3(0, 1, 0))
 	
