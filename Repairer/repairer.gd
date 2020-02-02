@@ -20,8 +20,11 @@ var rng := RandomNumberGenerator.new()
 
 func _ready():
 	add_to_group("player")
+	$KittyCat.get_node("AnimationPlayer").get_animation("Idle").loop = true
+	$KittyCat.get_node("AnimationPlayer").get_animation("Holding Walk").loop = true
 	$KittyCat.get_node("AnimationPlayer").get_animation("Walk").loop = true
 	$KittyCat.get_node("AnimationPlayer").play("Walk")
+	$KittyCat.get_node("AnimationPlayer").set_default_blend_time(0.2)
 	rng.randomize()
 
 func _physics_process(delta):
@@ -33,6 +36,14 @@ func _physics_process(delta):
 		
 	move_and_slide(movement, Vector3(0, 1, 0))
 	$KittyCat.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
+
+	if speed.length_squared() > 50 * 50:
+		if num_collected > 0:
+			$KittyCat.get_node("AnimationPlayer").play("Holding Walk")
+		else:
+			$KittyCat.get_node("AnimationPlayer").play("Walk")
+	else:
+		$KittyCat.get_node("AnimationPlayer").play("Idle")
 
 	if caught_cooldown <= 0:
 		_pick_up_nearby_cds()
