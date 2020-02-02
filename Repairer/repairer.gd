@@ -6,7 +6,7 @@ export var acceleration := 10
 export var max_speed := 200
 var speed := Vector2(0, 0)
 var input : Vector2
-var numCollected := 0
+var num_collected := 0
 var caught_cooldown := 0.0
 const caught_cooldown_length := 3.0
 
@@ -31,7 +31,7 @@ func _physics_process(delta):
 		if collectable.collected:
 			continue
 		collectable.collect()
-		numCollected += 1
+		num_collected += 1
 		
 	$KittyCat.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
 
@@ -57,12 +57,21 @@ func _unhandled_key_input(event):
 		repair()
 
 func repair():
+	if num_collected <= 0:
+		# Can't repair if you're not holding anything
+		return
 	var bodies = $Area.get_overlapping_bodies()
 	for body in bodies:
-		var repairable = body.get_parent()
-		if not repairable.is_in_group("Repairable"):
+		if not body.get_parent().is_in_group("Repairable"):
+			continue
+		if not body.get_parent() is Repairable:
+			print("Things tagged with Repairable should be Repairable things")
+			continue
+		var repairable := body.get_parent() as Repairable
+		if repairable.repaired:
 			continue
 		repairable.repair()
+		num_collected -= 1
 
 func can_be_caught():
 	return caught_cooldown <= 0

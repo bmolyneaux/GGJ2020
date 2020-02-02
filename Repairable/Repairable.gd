@@ -1,4 +1,5 @@
 extends Spatial
+class_name Repairable
 
 export(bool) var repaired := false
 var repairTime : int

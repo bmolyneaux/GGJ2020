@@ -12,6 +12,9 @@
 
 [node name="Repairable" parent="." instance=ExtResource( 1 )]
 
+[node name="Repairable5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.54865, 2.38419e-07, 2.09873 )
+
 [node name="Repairable2" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.51652, 0, -4.06838 )
 
@@ -30,6 +33,13 @@ transform = Transform( 1, 0, 0, 0, 0.856501, 0.516145, 0, -0.516145, 0.856501, 0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98274, 0, 3.11699 )
 
 [node name="GamepadController" parent="Repairer" instance=ExtResource( 4 )]
+
+[node name="KeyboardController" parent="Repairer" instance=ExtResource( 7 )]
+up = 16777232
+down = 16777234
+left = 16777231
+right = 16777233
+catch_or_repair = 16777237
 
 [node name="Catcher" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.13724, 0, 2.65013 )

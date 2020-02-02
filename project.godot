@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Spatial",
+"class": "Repairable",
+"language": "GDScript",
+"path": "res://Repairable/Repairable.gd"
+}, {
 "base": "KinematicBody",
 "class": "Repairer",
 "language": "GDScript",
 "path": "res://Repairer/repairer.gd"
 } ]
 _global_script_class_icons={
+"Repairable": "",
 "Repairer": ""
 }
 
