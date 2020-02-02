@@ -41,7 +41,7 @@ transform = Transform( 1, 0, 0, 0, 0.422618, 0.906308, 0, -0.906308, 0.422618, 0
 script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer/Viewport/CameraPivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
 current = true
 
 [node name="World" parent="GridContainer/ViewportContainer/Viewport" instance=ExtResource( 1 )]
@@ -69,7 +69,7 @@ script = ExtResource( 3 )
 index = 1
 
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer2/Viewport/CameraPivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
 current = true
 
 [node name="ViewportContainer3" type="ViewportContainer" parent="GridContainer"]
@@ -95,7 +95,7 @@ script = ExtResource( 3 )
 index = 2
 
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer3/Viewport/CameraPivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4 )
 current = true
 
 [node name="ViewportContainer4" type="ViewportContainer" parent="GridContainer"]
@@ -122,5 +122,5 @@ script = ExtResource( 3 )
 index = 3
 
 [node name="Camera" type="Camera" parent="GridContainer/ViewportContainer4/Viewport/CameraPivot"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.95343 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
 current = true
