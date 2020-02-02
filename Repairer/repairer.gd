@@ -3,7 +3,9 @@ class_name Repairer
 
 export(int) var index := 0
 export var acceleration := 10
-export var max_speed := 200
+export var regular_speed := 250
+export var carry_speed := 150
+export var hurt_speed := 400
 var speed := Vector2(0, 0)
 var input : Vector2
 var num_collected := 0
@@ -16,7 +18,7 @@ func _ready():
 	$KittyCat.get_node("AnimationPlayer").play("Walk")
 
 func _physics_process(delta):
-	var desired_speed = input * max_speed
+	var desired_speed = input * get_speed()
 	
 	speed = lerp(speed, desired_speed, 0.2)
 	
@@ -80,3 +82,10 @@ func can_be_caught():
 
 func get_caught():
 	caught_cooldown = caught_cooldown_length
+
+func get_speed():
+	if caught_cooldown > 0:
+		return hurt_speed
+	if num_collected > 0:
+		return carry_speed
+	return regular_speed
