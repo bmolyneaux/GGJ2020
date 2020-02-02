@@ -6,6 +6,10 @@ var speed := Vector2(0, 0)
 var input : Vector2
 var num_caught := 0
 
+func _ready():
+	$KittyCat.get_node("AnimationPlayer").get_animation("Walk").loop = true
+	$KittyCat.get_node("AnimationPlayer").play("Walk")
+
 func _physics_process(delta):
 	var desired_speed = input * max_speed
 	
@@ -14,12 +18,13 @@ func _physics_process(delta):
 	var movement = Vector3(speed.x, 0, speed.y) * delta
 		
 	move_and_slide(movement, Vector3(0, 1, 0))
+	$KittyCat.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
 
 	var bodies = $Area.get_overlapping_bodies()
 	for body in bodies:
 		# Check for catching the skating kiddos
 		if not body.is_in_group("Player"):
-			return
+			continue
 		var repairer := body as Repairer
 		if repairer.can_be_caught():
 			repairer.get_caught()
