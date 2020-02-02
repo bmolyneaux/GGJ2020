@@ -5,7 +5,7 @@ var collected := false
 var spawnCounter := 0.0
 var spawnCountLength := 3.0
 
-func _ready():
+func be_dropped():
 	spawnCounter = spawnCountLength
 
 func _process(delta):

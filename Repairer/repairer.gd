@@ -114,6 +114,7 @@ func _drop_cd():
 		+ (rng.randf_range(-1, 1) * Vector3.LEFT)
 		+ (rng.randf_range(-1, 1) * Vector3.FORWARD)
 	)
+	cd.be_dropped()
 	get_parent().add_child(cd)
 	num_collected -= 1
 
