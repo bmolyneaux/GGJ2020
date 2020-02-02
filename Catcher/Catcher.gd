@@ -21,9 +21,12 @@ func _physics_process(delta):
 	
 	var movement = Vector3(speed.x, gravity_speed, speed.y) * delta
 		
-	move_and_slide(movement, Vector3(0, 1, 0))
+	var actual_movement = move_and_slide(movement, Vector3(0, 1, 0))
 	$PuppyDog.rotation = Vector3(0, atan2(speed.y, -speed.x),0)
 	$PuppyDog.rotate_x(-0.4)
+	
+	var is_moving = actual_movement.length_squared() > 0.01
+	$RunParticles.emitting = is_moving
 
 	var bodies = $Area.get_overlapping_bodies()
 	for body in bodies:

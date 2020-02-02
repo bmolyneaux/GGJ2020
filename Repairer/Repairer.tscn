@@ -1,7 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Repairer/repairer.gd" type="Script" id=1]
-[ext_resource path="res://Assets/DustCloud.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://Repairer/RunParticles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/KittyCat.fbx" type="PackedScene" id=3]
 [ext_resource path="res://Sfx/get_caught.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sfx/drop.ogg" type="AudioStream" id=5]
@@ -18,9 +18,6 @@ albedo_color = Color( 0.435294, 0.301961, 0.188235, 1 )
 [sub_resource type="CylinderShape" id=4]
 radius = 0.836404
 height = 0.922658
-
-[sub_resource type="Curve" id=5]
-_data = [ Vector2( 0, 0 ), 0.0, 2.42054, 0, 0, Vector2( 0.5, 0.5176 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -2.52861, 0.0, 0, 0 ]
 
 [node name="Repairer" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -57,17 +54,4 @@ stream = ExtResource( 5 )
 [node name="PickupSfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 
-[node name="CPUParticles" type="CPUParticles" parent="."]
-amount = 7
-lifetime = 0.8
-randomness = 0.5
-lifetime_randomness = 0.2
-local_coords = false
-mesh = ExtResource( 2 )
-spread = 180.0
-gravity = Vector3( 0, 0, 0 )
-initial_velocity = 0.2
-initial_velocity_random = 0.1
-scale_amount = 0.13
-scale_amount_random = 0.08
-scale_amount_curve = SubResource( 5 )
+[node name="RunParticles" parent="." instance=ExtResource( 2 )]

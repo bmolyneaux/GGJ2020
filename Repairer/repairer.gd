@@ -52,7 +52,7 @@ func _physics_process(delta):
 			$KittyCat.get_node("AnimationPlayer").play("Idle")
 			
 	var is_walking = $KittyCat.get_node("AnimationPlayer").current_animation == "Walk"
-	$CPUParticles.emitting = is_walking
+	$RunParticles.emitting = is_walking
 
 	if caught_cooldown <= 0:
 		_pick_up_nearby_cds()
