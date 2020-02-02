@@ -100,6 +100,7 @@ func _pick_up_nearby_cds():
 			continue
 		collectable.collect()
 		num_collected += 1
+		$KittyCat.set_casettes(num_collected)
 		$PickupSfx.play()
 
 func _drop_all_cds():
@@ -117,6 +118,7 @@ func _drop_cd():
 	cd.be_dropped()
 	get_parent().add_child(cd)
 	num_collected -= 1
+	$KittyCat.set_casettes(num_collected)
 
 func repair():
 	if num_collected <= 0:
@@ -134,6 +136,7 @@ func repair():
 			continue
 		repairable.repair()
 		num_collected -= 1
+		$KittyCat.set_casettes(num_collected)
 
 func can_be_caught():
 	return caught_cooldown <= 0
