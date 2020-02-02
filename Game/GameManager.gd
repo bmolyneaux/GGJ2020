@@ -52,3 +52,19 @@ func _process(delta):
 	
 	last_player_score = player_score
 	last_catcher_score = catcher_score
+
+func _restart():
+	get_tree().reload_current_scene()
+
+func _unhandled_input(event):
+	if not event.is_pressed():
+		return
+	if event is InputEventKey:
+		var key := event as InputEventKey
+		if (key.scancode == KEY_R or
+			key.scancode == KEY_ENTER):
+			_restart()
+	if event is InputEventJoypadButton:
+		var button := event as InputEventJoypadButton
+		if button.button_index == JOY_START:
+			_restart()
