@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Repairer/repairer.gd" type="Script" id=1]
 [ext_resource path="res://Assets/KittyCat.fbx" type="PackedScene" id=2]
 [ext_resource path="res://Repairer/KittyCat.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sfx/get_caught.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sfx/drop.ogg" type="AudioStream" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -39,3 +41,10 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0
 visible = false
 
 [node name="KittyCat" parent="." instance=ExtResource( 3 )]
+
+[node name="FallSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.237
+
+[node name="DropSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )

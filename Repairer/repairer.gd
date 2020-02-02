@@ -80,6 +80,7 @@ func cancelly_action():
 	if num_collected <= 0:
 		return
 	_drop_cd()
+	$DropSfx.play()
 
 func _pick_up_nearby_cds():
 	# Look for cool CD-ROMs
@@ -131,6 +132,7 @@ func can_be_caught():
 func get_caught():
 	_drop_all_cds()
 	caught_cooldown = caught_cooldown_length
+	$FallSfx.play()
 
 func get_speed():
 	if caught_cooldown > 0:
