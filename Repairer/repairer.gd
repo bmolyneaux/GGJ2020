@@ -13,6 +13,8 @@ var input : Vector2
 var num_collected := 0
 var caught_cooldown := 0.0
 const caught_cooldown_length := 3.0
+export(SpatialMaterial) var body_skin : SpatialMaterial
+export(SpatialMaterial) var face_skin : SpatialMaterial
 
 const cd_node := preload("res://Collectables/Collectable.tscn")
 
@@ -27,6 +29,11 @@ func _ready():
 	$KittyCat.get_node("AnimationPlayer").play("Walk")
 	$KittyCat.get_node("AnimationPlayer").set_default_blend_time(0.2)
 	rng.randomize()
+	
+	if body_skin:
+		$KittyCat.get_node("Armature/Skeleton/Mesh").set_surface_material(1, body_skin)
+	if face_skin:
+		$KittyCat.get_node("Armature/Skeleton/Mesh").set_surface_material(0, face_skin)
 
 func _physics_process(delta):
 	var desired_speed = input * get_speed()
