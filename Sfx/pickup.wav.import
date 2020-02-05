@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pickup.wav-8147cb3c69b7876bf1754a3df1be8a18.sample"
+
+[deps]
+
+source_file="res://Sfx/pickup.wav"
+dest_files=[ "res://.import/pickup.wav-8147cb3c69b7876bf1754a3df1be8a18.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
