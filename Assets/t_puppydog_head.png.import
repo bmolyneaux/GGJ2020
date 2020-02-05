@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/t_palmtree.png-9f34b407555efc351fb365cc1f5d4c76.s3tc.stex"
-path.etc2="res://.import/t_palmtree.png-9f34b407555efc351fb365cc1f5d4c76.etc2.stex"
+path.s3tc="res://.import/t_puppydog_head.png-2eb3be97ba436eab8f980f5f94467269.s3tc.stex"
+path.etc2="res://.import/t_puppydog_head.png-2eb3be97ba436eab8f980f5f94467269.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/t_palmtree.png"
-dest_files=[ "res://.import/t_palmtree.png-9f34b407555efc351fb365cc1f5d4c76.s3tc.stex", "res://.import/t_palmtree.png-9f34b407555efc351fb365cc1f5d4c76.etc2.stex" ]
+source_file="res://Assets/t_puppydog_head.png"
+dest_files=[ "res://.import/t_puppydog_head.png-2eb3be97ba436eab8f980f5f94467269.s3tc.stex", "res://.import/t_puppydog_head.png-2eb3be97ba436eab8f980f5f94467269.etc2.stex" ]
 
 [params]
 
