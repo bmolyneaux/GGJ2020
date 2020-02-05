@@ -4,8 +4,8 @@
 [ext_resource path="res://Repairer/RunParticles.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/KittyCat.fbx" type="PackedScene" id=3]
 [ext_resource path="res://Sfx/get_caught.wav" type="AudioStream" id=4]
-[ext_resource path="res://Sfx/drop.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Sfx/pickup.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Sfx/drop.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sfx/pickup.wav" type="AudioStream" id=6]
 [ext_resource path="res://Repairer/KittyCat.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CapsuleShape" id=1]
