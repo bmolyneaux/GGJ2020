@@ -10,7 +10,6 @@ var num_times_repaired := 0
 var num_repairs_needed := 10
 
 func _ready():
-	$Sprite3D.texture = $Viewport.get_texture()
 	_updateText()
 
 func repair():
@@ -31,4 +30,4 @@ func _updateText():
 	var repairs_left := num_repairs_needed - num_times_repaired
 	var repair_string := "%s" % repairs_left
 	repair_string = repair_string.replace("0", "O")
-	$Viewport/RepairCount/RichTextLabel.text = repair_string
+	$Viewport/RepairCount/CenterContainer/Label.text = repair_string
