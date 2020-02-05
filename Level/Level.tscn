@@ -1,10 +1,10 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Repairer/Repairer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controllers/KeyboardController.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Environment/material_grass.tres" type="Material" id=3]
 [ext_resource path="res://Environment/Block.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Environment/material_block.tres" type="Material" id=5]
+[ext_resource path="res://Repairer/face3.tres" type="Material" id=5]
 [ext_resource path="res://Environment/Ramp.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Collectables/Collectable.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Repairable/Repairable.tscn" type="PackedScene" id=8]
@@ -21,10 +21,13 @@
 [ext_resource path="res://addons/mixing-desk/music/containers/core_cont.gd" type="Script" id=19]
 [ext_resource path="res://Music/town normal.ogg" type="AudioStream" id=20]
 [ext_resource path="res://Music/town big ups massive rastahgwan brrat.ogg" type="AudioStream" id=21]
+[ext_resource path="res://Repairer/body3.tres" type="Material" id=22]
 [ext_resource path="res://Level/Music.gd" type="Script" id=23]
 [ext_resource path="res://Environment/House.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Environment/PalmBig.tscn" type="PackedScene" id=25]
 [ext_resource path="res://Environment/PalmSmall.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Repairer/face2.tres" type="Material" id=27]
+[ext_resource path="res://Repairer/body2.tres" type="Material" id=28]
 
 [sub_resource type="ProceduralSky" id=1]
 
@@ -68,40 +71,33 @@ material/0 = ExtResource( 3 )
 [node name="Block1" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 0.426974, 0, 0, 0, 1, -9.77569, 0.504861, 7.73174 )
 use_in_baked_light = true
-material/0 = ExtResource( 5 )
 
 [node name="Block8" parent="World" instance=ExtResource( 4 )]
 transform = Transform( -6.05111e-07, 0, 1, 0, 0.426974, 0, -14.5769, 0, -4.6028e-08, -14.2065, 0.504861, -0.98245 )
-material/0 = ExtResource( 5 )
 
 [node name="Block15" parent="World" instance=ExtResource( 4 )]
 transform = Transform( -6.05111e-07, 0, 1, 0, 0.426974, 0, -13.8433, 0, -4.37114e-08, 14.845, 0.504861, 0.825307 )
-material/0 = ExtResource( 5 )
 
 [node name="Block2" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 0.426974, 0, 0, 0, 1, -9.77609, 0.513829, 5.06141 )
-material/0 = ExtResource( 5 )
 
 [node name="Block9" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 0.426974, 0, 0, 0, 1, -9.77569, 0.504861, -9.33895 )
-material/0 = ExtResource( 5 )
 
 [node name="Block12" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1.04361, 0, 0, 0, 0.426974, 0, 0, 0, 1.00026, 10.6646, 0.504861, 5.01029 )
-material/0 = ExtResource( 5 )
 
 [node name="Block13" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1.04361, 0, 0, 0, 1.03918, 0, 0, 0, 1.00026, 10.6646, 0.504861, 2.27238 )
 
 [node name="Block6" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 1.66381, 0, 0, 0, 0.426974, 0, 0, 0, 1.76347, -6.08875, 0.504865, -0.927485 )
-material/0 = ExtResource( 5 )
 
 [node name="Block4" parent="World" instance=ExtResource( 4 )]
 transform = Transform( 2.32021, 0, 0, 0, 0.442428, 0, 0, 0, 6.01095, 5.03067, 0.352553, 2.57256 )
 
 [node name="Ramp1" parent="World" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 0.289355, 0, 0, 0, 1, 1.73032, 0.366486, 2.66615 )
+transform = Transform( 1.01935, 0, 0, 0, 0.363816, 0, 0, 0, 1.01935, 1.73032, 0.435336, 2.66615 )
 
 [node name="Ramp2" parent="World" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 0.432375, 0, 0, 0, 1, 6.3047, 1.12971, 2.66615 )
@@ -120,6 +116,8 @@ material/0 = SubResource( 4 )
 
 [node name="Repairer" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.52222, 0.0999995, 4.86976 )
+body_skin = ExtResource( 22 )
+face_skin = ExtResource( 5 )
 
 [node name="KeyboardController" parent="Players/Repairer" instance=ExtResource( 2 )]
 
@@ -132,6 +130,8 @@ index = 1
 [node name="Repairer3" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.80523, 0.1, 8.98917 )
 index = 2
+body_skin = ExtResource( 28 )
+face_skin = ExtResource( 27 )
 
 [node name="GamepadController" parent="Players/Repairer3" instance=ExtResource( 12 )]
 player_index = 1
@@ -248,7 +248,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.29248, 1.72655, 2.32964 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6004, 0.81916, 5.23872 )
 
 [node name="Radios" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Repairable" parent="Radios" instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7584, 0, 10.8497 )
