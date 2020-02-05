@@ -31,9 +31,9 @@ func _ready():
 	rng.randomize()
 	
 	if body_skin:
-		$KittyCat.get_node("Armature/Skeleton/Mesh").set_surface_material(1, body_skin)
+		$KittyCat.get_node("Armature/Skeleton/Mesh").set_surface_material(0, body_skin)
 	if face_skin:
-		$KittyCat.get_node("Armature/Skeleton/Mesh").set_surface_material(0, face_skin)
+		$KittyCat.get_node("Armature/Skeleton/Mesh").set_surface_material(1, face_skin)
 
 func _physics_process(delta):
 	var desired_speed = input * get_speed()
