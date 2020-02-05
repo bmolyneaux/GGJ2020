@@ -66,7 +66,6 @@ anims/Bounce = SubResource( 1 )
 
 [node name="CPUParticles" type="CPUParticles" parent="." index="5"]
 transform = Transform( -4.08414e-08, 0.356379, -0.934341, 1.55778e-08, 0.934341, 0.356379, 1, 0, -4.37114e-08, -0.371196, 0.728875, -0.421512 )
-emitting = false
 amount = 4
 lifetime = 2.0
 mesh = SubResource( 3 )
@@ -79,7 +78,6 @@ color_ramp = SubResource( 5 )
 
 [node name="CPUParticles2" type="CPUParticles" parent="." index="6"]
 transform = Transform( -4.08414e-08, 0.356379, -0.934341, 1.55778e-08, 0.934341, 0.356379, 1, 0, -4.37114e-08, -0.371196, 0.728875, 0.457488 )
-emitting = false
 amount = 4
 lifetime = 2.0
 mesh = SubResource( 3 )
