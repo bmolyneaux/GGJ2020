@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Repairable/Repairable.gd" type="Script" id=1]
 [ext_resource path="res://UI/RepairCount.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sfx/insert.ogg" type="AudioStream" id=3]
-[ext_resource path="res://Sfx/record_scratch.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Sfx/insert.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sfx/record_scratch.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Radio.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CylinderMesh" id=1]
