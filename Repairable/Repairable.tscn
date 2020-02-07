@@ -8,7 +8,8 @@
 
 [sub_resource type="CylinderMesh" id=1]
 
-[sub_resource type="CylinderShape" id=2]
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 0.615435, 0.355816 )
 
 [sub_resource type="ViewportTexture" id=3]
 viewport_path = NodePath("Viewport")
@@ -28,6 +29,7 @@ material/0 = null
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.366307, 0.0322861 )
 shape = SubResource( 2 )
 
 [node name="Viewport" type="Viewport" parent="."]
@@ -50,4 +52,4 @@ stream = ExtResource( 3 )
 stream = ExtResource( 4 )
 
 [node name="Radio" parent="." instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, 1, -0.244123, 0.969744, -1.06709e-08, -0.969744, -0.244123, -4.23889e-08, 0, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, -0.304731, 0.952438, -1.33202e-08, -0.952438, -0.304731, -4.16324e-08, 0, -0.0920493, 0 )
