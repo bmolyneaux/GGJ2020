@@ -10,51 +10,69 @@ script = ExtResource( 3 )
 [node name="Armature" parent="." index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00219727, -0.0063414, 0.000472605 )
 
+[node name="Skeleton" parent="Armature" index="0"]
+bones/7/bound_children = [ NodePath("Casettes") ]
+
 [node name="Casettes" type="BoneAttachment" parent="Armature/Skeleton" index="1"]
 transform = Transform( -3.96116e-07, -5.75629e-07, -1, 0.112271, 0.993677, -6.44469e-07, 0.993677, -0.112271, -3.32176e-07, -4.06733e-06, 0.380255, -0.0068211 )
 bone_name = "upper_torso"
 
 [node name="sm_cassette" parent="Armature/Skeleton/Casettes" index="0" instance=ExtResource( 2 )]
 transform = Transform( 0.0750794, 0.0765135, 0.318787, 0.327534, -0.0316296, -0.0695478, 0.0141583, 0.325977, -0.0815738, -0.00896266, 0.0536746, 0.175291 )
+visible = false
 
 [node name="sm_cassette2" parent="Armature/Skeleton/Casettes" index="1" instance=ExtResource( 2 )]
 transform = Transform( 0.0733327, 0.167907, 0.282039, 0.328193, -0.0421933, -0.0602139, 0.00532162, 0.288345, -0.173046, -0.00488261, 0.136019, 0.177397 )
+visible = false
 
 [node name="sm_cassette3" parent="Armature/Skeleton/Casettes" index="2" instance=ExtResource( 2 )]
 transform = Transform( 0.0431957, 0.0783914, 0.324199, 0.33295, -0.0296076, -0.0372023, 0.019869, 0.325722, -0.0814066, -0.000367712, 0.227149, 0.179729 )
+visible = false
 
 [node name="sm_cassette4" parent="Armature/Skeleton/Casettes" index="3" instance=ExtResource( 2 )]
 transform = Transform( 0.0249342, 0.134281, 0.30735, 0.334521, -0.0322838, -0.0130333, 0.0242987, 0.306663, -0.135953, 0.00321257, 0.299416, 0.181578 )
+visible = false
 
 [node name="sm_cassette5" parent="Armature/Skeleton/Casettes" index="4" instance=ExtResource( 2 )]
 transform = Transform( 0.0750794, 0.0765135, 0.318787, 0.327534, -0.0316296, -0.0695478, 0.0141583, 0.325977, -0.0815739, 0.0073031, 0.381971, 0.18369 )
+visible = false
 
 [node name="sm_cassette6" parent="Armature/Skeleton/Casettes" index="5" instance=ExtResource( 2 )]
 transform = Transform( 0.0750794, 0.0765135, 0.318787, 0.327534, -0.0316296, -0.0695478, 0.0141583, 0.325977, -0.0815738, 0.011092, 0.458443, 0.185646 )
+visible = false
 
 [node name="sm_cassette7" parent="Armature/Skeleton/Casettes" index="6" instance=ExtResource( 2 )]
 transform = Transform( 0.167253, 0.0697788, 0.283327, 0.291792, -0.0393742, -0.162553, -0.000555677, 0.326645, -0.0801195, 0.0151292, 0.539927, 0.187731 )
+visible = false
 
 [node name="sm_cassette8" parent="Armature/Skeleton/Casettes" index="7" instance=ExtResource( 2 )]
 transform = Transform( 0.0737447, 0.038275, 0.325904, 0.327616, -0.0275109, -0.0709009, 0.0185898, 0.333008, -0.043316, 0.0199187, 0.636605, 0.190204 )
+visible = false
 
 [node name="sm_cassette9" parent="Armature/Skeleton/Casettes" index="8" instance=ExtResource( 2 )]
 transform = Transform( 0.0750794, 0.0765135, 0.318788, 0.327534, -0.0316296, -0.0695476, 0.0141583, 0.325977, -0.0815739, 0.0238718, 0.716383, 0.192245 )
+visible = false
 
 [node name="sm_cassette10" parent="Armature/Skeleton/Casettes" index="9" instance=ExtResource( 2 )]
 transform = Transform( 0.0203071, 0.0796603, 0.326126, 0.334981, -0.0263777, -0.0144149, 0.0221636, 0.325691, -0.0809341, 0.0275333, 0.790291, 0.194137 )
+visible = false
 
 [node name="sm_cassette11" parent="Armature/Skeleton/Casettes" index="10" instance=ExtResource( 2 )]
 transform = Transform( 0.0750794, 0.0765135, 0.318788, 0.327534, -0.0316296, -0.0695477, 0.0141583, 0.325977, -0.0815739, 0.0319674, 0.879787, 0.196426 )
+visible = false
 
 [node name="sm_cassette12" parent="Armature/Skeleton/Casettes" index="11" instance=ExtResource( 2 )]
 transform = Transform( 0.0792838, 0.118858, 0.304472, 0.326724, -0.0374836, -0.0704454, 0.00903821, 0.312384, -0.124301, 0.0356066, 0.953241, 0.198305 )
+visible = false
 
 [node name="sm_cassette13" parent="Armature/Skeleton/Casettes" index="12" instance=ExtResource( 2 )]
 transform = Transform( 0.0727254, 0.0155392, 0.328004, 0.327692, -0.0250301, -0.0714704, 0.0211087, 0.335035, -0.0205525, 0.0387056, 1.01579, 0.199905 )
+visible = false
 
 [node name="sm_cassette14" parent="Armature/Skeleton/Casettes" index="13" instance=ExtResource( 2 )]
 transform = Transform( 0.0759774, 0.179201, 0.274283, 0.327632, -0.0423095, -0.0631123, 0.000877275, 0.281448, -0.184126, 0.0423006, 1.08835, 0.201762 )
+visible = false
 
 [node name="sm_cassette15" parent="Armature/Skeleton/Casettes" index="14" instance=ExtResource( 2 )]
 transform = Transform( 0.0750793, 0.0765135, 0.318788, 0.327534, -0.0316296, -0.0695477, 0.0141583, 0.325977, -0.0815739, 0.0506339, 1.16381, 0.202881 )
+visible = false
