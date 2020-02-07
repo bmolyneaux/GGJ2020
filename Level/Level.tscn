@@ -144,7 +144,7 @@ player_index = 2
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4878, 0.12519, 4.67103 )
 
 [node name="CD19" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4733, 0.12519, 11.1203 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.38777, 0.12519, 11.8264 )
 
 [node name="CD20" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50775, 0.12519, 10.9942 )
@@ -180,19 +180,19 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.82144, 0.835949, 0.714774 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.104961, 0.190012, 4.18021 )
 
 [node name="CD31" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.56654, 0.190013, 10.3479 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0218, 0.190013, 5.11427 )
 
 [node name="CD32" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.61023, 0.190013, 2.32601 )
 
 [node name="CD33" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80616, 0.190013, 9.59881 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.57091, 0.190013, 8.61999 )
 
 [node name="CD34" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0545, 0.190013, -2.85336 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3357, 0.190013, -2.46507 )
 
 [node name="CD2" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65039, 0.12519, 2.05873 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1246, 0.125189, -4.95903 )
 
 [node name="CD7" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25651, 0.12519, -0.654533 )
@@ -201,13 +201,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25651, 0.12519, -0.654533 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.229717, 0.12519, -1.51995 )
 
 [node name="CD11" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.72154, 0.12519, 9.76476 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92184, 0.12519, 2.1647 )
 
 [node name="CD12" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5363, 0.12519, 8.77822 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9742, 0.12519, 12.2049 )
 
 [node name="CD13" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.53142, 0.125189, -0.826247 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9896, 0.12519, 3.13661 )
 
 [node name="CD14" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7477, 0.125189, -5.16116 )
@@ -216,13 +216,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7477, 0.125189, -5.16116 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.91978, 0.125189, -4.67706 )
 
 [node name="CD16" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.25046, 0.125189, -11.9714 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0933, 0.125189, -12.0893 )
 
 [node name="CD9" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19734, 0.12519, -0.0194736 )
 
 [node name="CD10" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19734, 0.12519, -0.0194736 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.41965, 0.12519, -3.67571 )
 
 [node name="CD3" parent="Collectables" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63852, 0.12519, 3.45696 )
@@ -240,7 +240,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.59704, 0.12519, 3.00588 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.29248, 1.72655, 2.32964 )
 
 [node name="CD18" parent="Collectables" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6004, 0.81916, 5.23872 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6004, 0.81916, 5.01352 )
 
 [node name="Radios" type="Spatial" parent="."]
 
