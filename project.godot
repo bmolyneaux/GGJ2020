@@ -36,12 +36,6 @@ config/name="GGJ2020"
 run/main_scene="res://UI/Splitscreen.tscn"
 config/icon="res://icon.png"
 
-[editor_plugins]
-
-enabled=PoolStringArray( "mixing-desk" )
-
 [rendering]
 
-quality/directional_shadow/size=1024
-quality/directional_shadow/size.mobile=1024
 environment/default_environment="res://default_env.tres"
