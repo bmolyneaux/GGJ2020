@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Repairer/repairer.gd" type="Script" id=1]
 [ext_resource path="res://Repairer/RunParticles.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/KittyCat.fbx" type="PackedScene" id=3]
 [ext_resource path="res://Sfx/get_caught.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sfx/drop.wav" type="AudioStream" id=5]
 [ext_resource path="res://Sfx/pickup.wav" type="AudioStream" id=6]
@@ -37,10 +36,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 4 )
-
-[node name="KittyCatOld" parent="." instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0 )
-visible = false
 
 [node name="KittyCat" parent="." instance=ExtResource( 7 )]
 
