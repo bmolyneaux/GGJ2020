@@ -32,9 +32,19 @@ _global_script_class_icons={
 
 [application]
 
-config/name="GGJ2020"
+config/name="PupG"
 run/main_scene="res://UI/Splitscreen.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://Assets/splash.png"
+boot_splash/bg_color=Color( 0.301961, 0.301961, 0.301961, 1 )
+config/icon="res://Assets/BoomBox Vivid.PNG"
+
+[display]
+
+window/size/fullscreen=true
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
 
 [rendering]
 
