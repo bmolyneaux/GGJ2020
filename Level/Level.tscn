@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Repairer/Repairer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Controllers/KeyboardController.tscn" type="PackedScene" id=2]
@@ -16,9 +16,6 @@
 [ext_resource path="res://Assets/sm_palmBig.fbx" type="PackedScene" id=14]
 [ext_resource path="res://Environment/FenceSpawner.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/beach.png" type="Texture" id=16]
-[ext_resource path="res://addons/mixing-desk/music/song.gd" type="Script" id=17]
-[ext_resource path="res://addons/mixing-desk/music/mixing_desk_music.gd" type="Script" id=18]
-[ext_resource path="res://addons/mixing-desk/music/containers/core_cont.gd" type="Script" id=19]
 [ext_resource path="res://Music/town normal.ogg" type="AudioStream" id=20]
 [ext_resource path="res://Music/town big ups massive rastahgwan brrat.ogg" type="AudioStream" id=21]
 [ext_resource path="res://Repairer/body3.tres" type="Material" id=22]
@@ -29,6 +26,8 @@
 [ext_resource path="res://Repairer/face2.tres" type="Material" id=27]
 [ext_resource path="res://Repairer/body2.tres" type="Material" id=28]
 [ext_resource path="res://Level/environment.tres" type="Environment" id=29]
+[ext_resource path="res://Assets/CatHead.material" type="Material" id=30]
+[ext_resource path="res://Assets/CatBody.material" type="Material" id=31]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -118,6 +117,8 @@ face_skin = ExtResource( 5 )
 [node name="Repairer2" parent="Players" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.74952, 0.1, -5.76348 )
 index = 1
+body_skin = ExtResource( 31 )
+face_skin = ExtResource( 30 )
 
 [node name="GamepadController" parent="Players/Repairer2" instance=ExtResource( 12 )]
 
@@ -256,7 +257,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.9329, 0.115152, 11.0719 )
 
 [node name="FenceSpawner" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.94402, 0.1, 2.61721 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -266,7 +267,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333719, 0, -6.18572 )
 
 [node name="FenceSpawner9" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0598, 0.1, -13.7305 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner9"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -276,7 +277,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.1035, 0, 0.85021 )
 
 [node name="FenceSpawner5" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52453, 0.1, 9.80917 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -286,7 +287,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69754, 0, -0.562301 )
 
 [node name="FenceSpawner7" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2372, 0.1, 14.1159 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -296,7 +297,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0514, 0, -0.208153 )
 
 [node name="FenceSpawner8" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01842, 0.1, 14.3443 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -306,7 +307,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.603, 9.53674e-07, -0.768869
 
 [node name="FenceSpawner6" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.52453, 0.1, 7.72806 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -316,7 +317,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.69754, 0, -0.562301 )
 
 [node name="FenceSpawner2" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9682, 0.1, 2.61721 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -326,7 +327,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333719, 0, -6.31976 )
 
 [node name="FenceSpawner3" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8947, 0.1, 2.66511 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -336,7 +337,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.05298, 0, -0.548589 )
 
 [node name="FenceSpawner4" parent="Fences" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8437, 0.1, -2.98814 )
-jank = 1.0
+jank = 1
 
 [node name="Start" type="Spatial" parent="Fences/FenceSpawner4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0401974, 0, -0.54496 )
@@ -381,33 +382,11 @@ material/0 = null
 ]]
 script = ExtResource( 23 )
 
-[node name="MixingDeskMusic" type="Node" parent="Music"]
-script = ExtResource( 18 )
-play_mode = 1
-autoplay = NodePath("Song1")
-
-[node name="Song1" type="Node" parent="Music/MixingDeskMusic"]
-script = ExtResource( 17 )
-tempo = 120
-bars = 40
-beats_in_bar = 4
-
-[node name="CoreContainer" type="Node" parent="Music/MixingDeskMusic/Song1"]
-script = ExtResource( 19 )
-
-[node name="Track" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song1/CoreContainer"]
+[node name="Song1" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 20 )
+autoplay = true
 
-[node name="Song2" type="Node" parent="Music/MixingDeskMusic"]
-script = ExtResource( 17 )
-tempo = 120
-bars = 56
-beats_in_bar = 4
-
-[node name="CoreContainer" type="Node" parent="Music/MixingDeskMusic/Song2"]
-script = ExtResource( 19 )
-
-[node name="Track" type="AudioStreamPlayer" parent="Music/MixingDeskMusic/Song2/CoreContainer"]
+[node name="Song2" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 21 )
 
 [node name="Bridge" type="Spatial" parent="."]
