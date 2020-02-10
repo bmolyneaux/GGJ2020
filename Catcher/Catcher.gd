@@ -2,7 +2,7 @@ extends KinematicBody
 
 export(int) var index := 0
 export var acceleration := 10
-export var max_speed := 200
+export var max_speed := 190
 export var tackle_speed_scale := 2.0
 
 export(Curve)  var tackle_speed_curve
